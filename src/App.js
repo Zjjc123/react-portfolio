@@ -16,20 +16,29 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <Navbar bg="light" expand="lg">
-          <Navbar.Brand href="/">Portfolio</Navbar.Brand>
+        <Navbar className="border-bottom" bg="light" expand="lg">
+          <Navbar.Brand href="/">
+            <img
+              src= {logo}
+              width="30"
+              height="30"
+              className="d-inline-block align-top"
+              alt="Logo"
+            />
+          </Navbar.Brand>
+          <Navbar.Brand href="/">Jason Zhang</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="mr-auto">
-              <Nav.Link href="/">About</Nav.Link>
-              <Nav.Link href="/Projects">Projects</Nav.Link>
+            <Nav className="ml-auto">
+              <Nav.Link href="/">Projects</Nav.Link>
+              <Nav.Link href="/About">About</Nav.Link>
               <Nav.Link href="/Gallery">Gallery</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Navbar>
 
-        <Route exact path="/" component={About} />
-        <Route path="/Projects" component={Projects} />
+        <Route exact path="/" component={Projects} />
+        <Route path="/About" component={About} />
         <Route path="/Gallery" component={Gallery} />
       </div>
     </BrowserRouter>
