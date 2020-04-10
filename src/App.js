@@ -18,7 +18,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <Navbar className="border-bottom" bg="light" expand="lg">
+        <Navbar bg="light" expand="lg">
           <Navbar.Brand href="/">
             <img
               src= {logo}

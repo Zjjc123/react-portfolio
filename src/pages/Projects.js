@@ -1,18 +1,29 @@
 import React from "react"
 import ProjectCard from "../components/Card.js";
 import Jumbotron from "react-bootstrap/Jumbotron";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
 function Projects(props) {
     return (
-        <Jumbotron>
-        <div>
-            <h1>Projects</h1>
-            <ProjectCard
-                title="Covid Pro-Tips"
-                description = "Responsive, interactive, and professional website hosted with a Node.js server running on an AWS Ubuntu EC2 instance fetching and displaying live Covid-19 data along interactive maps and datatables."
-                repoLink = "https://github.com/Zjjc123/Covid-Pro-Tips"
-            />
-        </div>
+        <Jumbotron className="bg-transparent jumbotron-fluid p-0">
+            <Container fluid={true}>
+                <Row className="justify-content-center py-5">
+                    <Col>
+                        <h1 className="display-1 font-weight-bolder" >Jason Zhang</h1>
+                        <h3 className="display-4 font-weight-light">My Projects</h3>
+                        <h3 className="lead font-weight-light">Eastlake 2021</h3>
+                    </Col>
+                </Row>
+            </Container>
+            <Row className = "px-5">
+                <ProjectCard
+                    title="Covid Pro-Tips"
+                    description="Responsive, interactive, and professional website hosted with a Node.js server running on an AWS Ubuntu EC2 instance fetching and displaying live Covid-19 data along interactive maps and datatables."
+                    repoLink="https://github.com/Zjjc123/Covid-Pro-Tips"
+                />
+            </Row>
         </Jumbotron>
     )
 }
