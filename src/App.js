@@ -7,6 +7,8 @@ import Projects from './pages/Projects.js';
 import About from './pages/About.js';
 import Gallery from './pages/Gallery.js';
 
+import Footer from './components/Footer.js';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Navbar from 'react-bootstrap/Navbar';
@@ -40,6 +42,8 @@ function App() {
         <Route exact path="/" component={Projects} />
         <Route path="/About" component={About} />
         <Route path="/Gallery" component={Gallery} />
+
+        <Footer />
       </div>
     </BrowserRouter>
   );
