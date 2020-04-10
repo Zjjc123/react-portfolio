@@ -43,7 +43,7 @@ function App() {
         <Route path="/About" component={About} />
         <Route path="/Gallery" component={Gallery} />
 
-        <Footer />
+        <Footer/>
       </div>
     </BrowserRouter>
   );
