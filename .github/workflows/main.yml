@@ -24,6 +24,11 @@ jobs:
     - name: Install Dependencies
       run: npm install
     
+    - name: configuring git
+      run: |
+          git config --global user.email "zjjc123@hotmail.com",
+          git config --global user.name "zjjc123".
+    
     # Runs a single command using the runners shell
     - name: Deploy
       run: npm run deploy
