@@ -18,8 +18,8 @@ function Projects(props) {
                 </Row>
             </Container>
             <Container fluid>
-                <Row className="justify-content-center py-5">
-                    <Col>
+                <Row>
+                    <Col style={{ display: 'flex', justifyContent: 'center' }}>
                         <ProjectCard
                             title="Covid Pro-Tips"
                             description="Responsive, interactive, and professional website hosted with a Node.js server running on an AWS Ubuntu EC2 instance fetching and displaying live Covid-19 data along interactive maps and datatables."
@@ -30,7 +30,7 @@ function Projects(props) {
                             ]}
                         />
                     </Col>
-                    <Col>
+                    <Col style={{ display: 'flex', justifyContent: 'center' }}>
                         <ProjectCard
                             title="Unite NEAT"
                             description="Neural Evolution of Augmenting Topologies Implementation. Using Unity easy Graphical Implementations"
@@ -40,8 +40,17 @@ function Projects(props) {
                             ]}
                         />
                     </Col>
+                    <Col style = {{display: 'flex', justifyContent: 'center'}}>
+                        <ProjectCard
+                            title="Vitality"
+                            description="Mobile Fitness App built on Android Studio that provides a variety of health-related functionalities like heart rate monitoring and fitness counters. Complete with a minimalistic UI, profile settings, and pinned notifications."
+                            imgSrc={require("../img/vitality.jpg")}
+                            buttons={[
+                                { name: "Repo", link: "https://github.com/Zjjc123/Vitality" },
+                            ]}
+                        />
+                    </Col>
                 </Row>
-                
             </Container>
         </Jumbotron>
     )
