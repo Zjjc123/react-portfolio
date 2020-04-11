@@ -2,7 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-import { BrowserRouter, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Route} from 'react-router-dom';
 import Projects from './pages/Projects.js';
 import About from './pages/About.js';
 import Gallery from './pages/Gallery.js';
