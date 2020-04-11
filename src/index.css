@@ -22,5 +22,11 @@ code {
 }
 
 .jumbotron {
-  min-height: calc(100vh - 150px);
+  min-height: calc(100vh - 113px);
+}
+
+#profile {
+  margin-top: 5%;
+  height: 30%;
+  width: 30%;
 }
