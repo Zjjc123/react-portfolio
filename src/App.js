@@ -33,15 +33,15 @@ function App() {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ml-auto">
               <Nav.Link href="/">Projects</Nav.Link>
-              <Nav.Link href="/About">About</Nav.Link>
-              <Nav.Link href="/Gallery">Gallery</Nav.Link>
+              <Nav.Link href="/about">About</Nav.Link>
+              <Nav.Link href="/gallery">Gallery</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Navbar>
 
-        <Route exact path="/" component={Projects} />
-        <Route path="/About" component={About} />
-        <Route path="/Gallery" component={Gallery} />
+        <Route exact path= {process.env.PUBLIC_URL + '/'} component={Projects} />
+        <Route path= {process.env.PUBLIC_URL + '/about'} component={About} />
+        <Route path= {process.env.PUBLIC_URL + '/gallery'} component={Gallery} />
 
         <Footer/>
       </div>
