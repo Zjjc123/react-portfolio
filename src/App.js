@@ -16,7 +16,7 @@ import Nav from 'react-bootstrap/Nav';
 
 function App() {
   return (
-    <BrowserRouter>
+    <Router basename={`${process.env.PUBLIC_URL}/`}>
       <div className="App">
         <Navbar bg="light" expand="lg">
           <Navbar.Brand href="/">
@@ -39,9 +39,9 @@ function App() {
           </Navbar.Collapse>
         </Navbar>
 
-        <Route exact path= {process.env.PUBLIC_URL + '/'} component={Projects} />
-        <Route path= {process.env.PUBLIC_URL + '/about'} component={About} />
-        <Route path= {process.env.PUBLIC_URL + '/gallery'} component={Gallery} />
+        <Route exact path= {'/'} component={Projects} />
+        <Route path= {'/about'} component={About} />
+        <Route path= {'/gallery'} component={Gallery} />
 
         <Footer/>
       </div>
