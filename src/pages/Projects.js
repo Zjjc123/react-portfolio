@@ -17,11 +17,14 @@ function Projects(props) {
                     </Col>
                 </Row>
             </Container>
-            <Row className = "px-5">
+            <Row className="px-5">
                 <ProjectCard
                     title="Covid Pro-Tips"
                     description="Responsive, interactive, and professional website hosted with a Node.js server running on an AWS Ubuntu EC2 instance fetching and displaying live Covid-19 data along interactive maps and datatables."
-                    repoLink="https://github.com/Zjjc123/Covid-Pro-Tips"
+                    buttons={[
+                        { name: "Repo", link: "https://github.com/Zjjc123/Covid-Pro-Tips" },
+                        { name: "Website", link: "https://www.webcovid-19.live" }
+                    ]}
                 />
             </Row>
         </Jumbotron>
