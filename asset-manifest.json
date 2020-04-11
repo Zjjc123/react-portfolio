@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/React-Portfolio/static/css/main.fe292c99.chunk.css",
-    "main.js": "/React-Portfolio/static/js/main.a94cdf98.chunk.js",
-    "main.js.map": "/React-Portfolio/static/js/main.a94cdf98.chunk.js.map",
+    "main.css": "/React-Portfolio/static/css/main.9b660e2e.chunk.css",
+    "main.js": "/React-Portfolio/static/js/main.404931ef.chunk.js",
+    "main.js.map": "/React-Portfolio/static/js/main.404931ef.chunk.js.map",
     "runtime-main.js": "/React-Portfolio/static/js/runtime-main.e19ca9a5.js",
     "runtime-main.js.map": "/React-Portfolio/static/js/runtime-main.e19ca9a5.js.map",
     "static/css/2.de424728.chunk.css": "/React-Portfolio/static/css/2.de424728.chunk.css",
     "static/js/2.dc3483f8.chunk.js": "/React-Portfolio/static/js/2.dc3483f8.chunk.js",
     "static/js/2.dc3483f8.chunk.js.map": "/React-Portfolio/static/js/2.dc3483f8.chunk.js.map",
     "index.html": "/React-Portfolio/index.html",
-    "precache-manifest.f1bd902f1cdda2762c736351289e1e17.js": "/React-Portfolio/precache-manifest.f1bd902f1cdda2762c736351289e1e17.js",
+    "precache-manifest.c876b34f8d9235525b7ca68fa746d492.js": "/React-Portfolio/precache-manifest.c876b34f8d9235525b7ca68fa746d492.js",
     "service-worker.js": "/React-Portfolio/service-worker.js",
     "static/css/2.de424728.chunk.css.map": "/React-Portfolio/static/css/2.de424728.chunk.css.map",
-    "static/css/main.fe292c99.chunk.css.map": "/React-Portfolio/static/css/main.fe292c99.chunk.css.map",
+    "static/css/main.9b660e2e.chunk.css.map": "/React-Portfolio/static/css/main.9b660e2e.chunk.css.map",
     "static/js/2.dc3483f8.chunk.js.LICENSE.txt": "/React-Portfolio/static/js/2.dc3483f8.chunk.js.LICENSE.txt",
     "static/media/covid-pro-tips.png": "/React-Portfolio/static/media/covid-pro-tips.a7dd8ade.png",
     "static/media/jumbotronSquare.jpg": "/React-Portfolio/static/media/jumbotronSquare.0bac8c0b.jpg",
-    "static/media/logo.svg": "/React-Portfolio/static/media/logo.f328ac4b.svg",
+    "static/media/logo.svg": "/React-Portfolio/static/media/logo.9ecb9acd.svg",
     "static/media/unite-neat.png": "/React-Portfolio/static/media/unite-neat.acda77bb.png",
     "static/media/vitality.jpg": "/React-Portfolio/static/media/vitality.899d6e89.jpg"
   },
@@ -24,7 +24,7 @@
     "static/js/runtime-main.e19ca9a5.js",
     "static/css/2.de424728.chunk.css",
     "static/js/2.dc3483f8.chunk.js",
-    "static/css/main.fe292c99.chunk.css",
-    "static/js/main.a94cdf98.chunk.js"
+    "static/css/main.9b660e2e.chunk.css",
+    "static/js/main.404931ef.chunk.js"
   ]
 }
