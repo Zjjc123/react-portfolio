@@ -2,7 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-import { BrowserRouter, Route} from 'react-router-dom';
+import {BrowserRouter, Route} from 'react-router-dom';
 import Projects from './pages/Projects.js';
 import About from './pages/About.js';
 import Gallery from './pages/Gallery.js';
@@ -16,7 +16,7 @@ import Nav from 'react-bootstrap/Nav';
 
 function App() {
   return (
-    <BrowserRouter basename={`${process.env.PUBLIC_URL}/`}>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <div className="App">
         <Navbar bg="light" expand="lg">
           <Navbar.Brand href="/">
