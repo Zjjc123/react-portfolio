@@ -16,7 +16,7 @@ import Nav from 'react-bootstrap/Nav';
 
 function App() {
   return (
-    <Router basename={`${process.env.PUBLIC_URL}/`}>
+    <BrowserRouter basename={`${process.env.PUBLIC_URL}/`}>
       <div className="App">
         <Navbar bg="light" expand="lg">
           <Navbar.Brand href="/">
