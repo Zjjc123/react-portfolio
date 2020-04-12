@@ -1,11 +1,23 @@
 import React, { Component } from 'react';
 import Card from 'react-bootstrap/Card';
+import Image from "react-bootstrap/Image";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
 class ProjectCard extends Component {
     render() {
-        let element = this.props.buttons.map(function (object) { // for each element in the Roles array, display it https://stackoverflow.com/questions/37997893/promise-error-objects-are-not-valid-as-a-react-child
+        let links = this.props.links.map(function (object) {
             return (
-                <Card.Link href={object.link}>{object.name}</Card.Link>
+                <Col>
+                    <Card.Link href={object.link}>{object.name}</Card.Link>
+                </Col>
+            );
+        })
+        let icons = this.props.icons.map(function (object) {
+            return (
+                <Col>
+                    <Image id="badge" fluid src={object.img} />
+                </Col>
             );
         })
         return (
@@ -16,8 +28,13 @@ class ProjectCard extends Component {
                     <Card.Text>
                         {this.props.description}
                     </Card.Text>
-
-                    {element}
+                    <Row>
+                        {links}
+                    </Row>
+                    <div className = "py-2"/>
+                    <Row>
+                        {icons}
+                    </Row>
                 </Card.Body>
             </Card>
         );
