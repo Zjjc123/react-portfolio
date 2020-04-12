@@ -1,11 +1,16 @@
 import React from "react"
- 
+import Jumbotron from "react-bootstrap/Jumbotron"
+
 function Gallery(props) {
   return (
-    <div>
-      <h1>Gallery</h1>
-    </div>
+    <Jumbotron style={{
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+    }} className="bg-transparent jumbotron-fluid">
+      <h1 className="display-1 font-weight-bolder" >Under Construction</h1>
+    </Jumbotron>
   )
 }
- 
+
 export default Gallery;
