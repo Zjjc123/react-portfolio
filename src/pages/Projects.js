@@ -21,7 +21,9 @@ import javaImage from "../img/icons/java.jpg";
 function Projects(props) {
     return (
         <Jumbotron className="bg-transparent jumbotron-fluid p-0">
-            <Image id = "profile" className = "py-5" src={Background} roundedCircle fluid/>
+            <Row className = "justify-content-center py-5" xs = {2} sm = {2} md = {4} lg = {4} xl = {5}>
+                <Image src={Background} roundedCircle fluid/>
+            </Row>
             <Container fluid>
                 <Row className="justify-content-center" >
                     <Col>

@@ -25,12 +25,6 @@ code {
   min-height: calc(100vh - 113px);
 }
 
-#profile {
-  margin-top: 5%;
-  height: 30%;
-  width: 30%;
-}
-
 #badge {
   border: 2px solid #ddd;
   height: 50px;
