@@ -8,7 +8,7 @@ function Gallery(props) {
       alignItems: 'center',
       justifyContent: 'center',
     }} className="bg-transparent jumbotron-fluid">
-      <h1 className="display-1 font-weight-bolder" >Under Construction</h1>
+      <h1>Under Construction</h1>
     </Jumbotron>
   )
 }
