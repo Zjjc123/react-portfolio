@@ -7,12 +7,7 @@ import Col from "react-bootstrap/Col"
 
 function About(props) {
   return (
-    <Jumbotron id="about" style={{
-      backgroundImage: `url(${bg})`,
-      backgroundRepeat: 'no-repeat',
-      backgroundSize: 'cover',
-      backgroundPosition: 'center center',
-    }} className="jumbotron-fluid">
+    <Jumbotron id="about" className="jumbotron-fluid">
       <Container fluid>
 
         <h1 id="aboutText" className="display-1 font-weight-bolder py-1">Jason Zhang</h1>

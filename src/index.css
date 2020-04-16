@@ -45,12 +45,23 @@ code {
     margin: 20px;
     padding-left: 50px;
   }
+
+  #about {
+    background-image: url('img/BackgroundWide.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
 }
 @media screen and (max-width: 991px){
   #aboutText {
     text-align: center;
     padding-left: 15px;
     padding-right: 15px;
+  }
+
+  #about {
+    background-color: transparent;
   }
 }
 
