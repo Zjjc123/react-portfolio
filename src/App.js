@@ -18,7 +18,7 @@ function App() {
   return (
     <HashRouter basename={process.env.PUBLIC_URL}>
       <div className="App">
-        <Navbar bg="light" expand="lg">
+        <Navbar bg="transparent" expand="lg">
           <Navbar.Brand href="/">
             <img
               src= {logo}
