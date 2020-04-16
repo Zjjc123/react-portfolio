@@ -2,7 +2,6 @@ import React from "react"
 import Jumbotron from "react-bootstrap/Jumbotron"
 import Container from "react-bootstrap/Container"
 
-import bg from "../img/BackgroundWide.jpg"
 import Col from "react-bootstrap/Col"
 
 function About(props) {
