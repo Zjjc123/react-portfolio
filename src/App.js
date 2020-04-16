@@ -15,7 +15,6 @@ import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 
 function App() {
-  console.log(process.env.PUBLIC_URL);
   return (
     <HashRouter basename={process.env.PUBLIC_URL}>
       <div className="App">
