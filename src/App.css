@@ -2,37 +2,69 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card {
+  transition: box-shadow .3s;
+  margin: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.card:hover {
+  box-shadow: 0 0 11px rgba(33,33,33,.2); 
+}
+
+.jumbotron {
+  min-height: calc(100vh - 113px);
+  margin: 0px !important;
+}
+
+#nopadding {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+#badge {
+  border: 2px solid #ddd;
+  height: 50px;
+  width: 50px;
+  border-radius: 10px !important;
+}
+
+
+@media screen and (min-width: 992px){
+  #aboutText {
+    text-align: left;
+    margin: 20px;
+    padding-left: 50px;
+  }
+
+  #about {
+    background-image: url('img/WideWhite.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+}
+@media screen and (max-width: 991px){
+  #aboutText {
+    text-align: center;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  #about {
+    background-color: transparent;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#loading {
+  animation-name: FadeAnim;
+  animation-duration: 1s;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@keyframes FadeAnim {
+  0% {
+     opacity: 0;
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+     opacity: 1;
   }
 }
