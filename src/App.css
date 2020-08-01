@@ -68,3 +68,21 @@
      opacity: 1;
   }
 }
+
+/* =========== Home Page ===========*/
+
+#homeTitle {
+  opacity: 0;
+  text-align: right;
+  color: white;
+  padding-right: 5%;
+}
+
+#titleBackground {
+  background-image: url("img/CACropped.png");
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 10%;
+}

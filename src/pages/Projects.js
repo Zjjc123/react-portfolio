@@ -39,7 +39,7 @@ function Projects(props) {
                         <ProjectCard
                             title="Covid Pro-Tips"
                             description="Responsive, interactive, and professional website hosted with a Node.js server running on an AWS Ubuntu EC2 instance fetching and displaying live Covid-19 data along interactive maps and datatables."
-                            imgSrc={require("../img/covid-pro-tips.png")}
+                            imgSrc={require("../img/projects/covid-pro-tips.png")}
                             links={[
                                 { name: "Repo", link: "https://github.com/Zjjc123/Covid-Pro-Tips" },
                                 { name: "Website", link: "https://www.webcovid-19.live" }
@@ -55,7 +55,7 @@ function Projects(props) {
                         <ProjectCard
                             title="Unite NEAT"
                             description="Neural Evolution of Augmenting Topologies Implementation. Using Unity easy Graphical Implementations"
-                            imgSrc={require("../img/unite-neat.png")}
+                            imgSrc={require("../img/projects/unite-neat.png")}
                             links={[
                                 { name: "Repo", link: "https://github.com/Zjjc123/UniteNEAT" },
                             ]}
@@ -69,7 +69,7 @@ function Projects(props) {
                         <ProjectCard
                             title="Vitality"
                             description="Mobile Fitness App built on Android Studio that provides a variety of health-related functionalities like heart rate monitoring and fitness counters. Complete with a minimalistic UI, profile settings, and pinned notifications."
-                            imgSrc={require("../img/vitality.jpg")}
+                            imgSrc={require("../img/projects/vitality.jpg")}
                             links={[
                                 { name: "Repo", link: "https://github.com/Zjjc123/Vitality" },
                             ]}
