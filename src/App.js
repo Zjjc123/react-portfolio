@@ -45,7 +45,7 @@ class App extends Component {
             </Navbar>
 
             <Route exact path={'/'} component={Home} />
-            <Route exact path={'/projects'} component={Projects} />
+            <Route path={'/projects'} component={Projects} />
             <Route path={'/about'} component={About} />
             <Route path={'/gallery'} component={Gallery} />
 
