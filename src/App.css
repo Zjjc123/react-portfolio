@@ -86,3 +86,9 @@
   background-size: cover;
   padding-top: 10%;
 }
+
+.sticky {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(160deg, #e4f5fc 0%,#bfe8f9 26%,#9fd8ef 59%,#0068f2 100%);
+}
