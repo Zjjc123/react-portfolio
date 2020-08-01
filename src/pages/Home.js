@@ -9,24 +9,26 @@ import { Controller, Scene } from "react-scrollmagic";
 
 function Home(props) {
     return (
-        <Controller>
-            <Scene duration={50} pin={true} enabled={true}>
-                <Row className="justify-content-center py-5" xs={2} sm={2} md={4} lg={4} xl={5}>
-                    <Image src={Background} roundedCircle fluid />
-                </Row>
-            </Scene>
-            <Scene duration={1000} pin={true} enabled={true}>
-                <Container fluid>
-                    <Row className="justify-content-center" >
-                        <Col>
-                            <h1 className="display-1 font-weight-bolder" >Jason Zhang</h1>
-                            <h4 className="display-4 font-weight-light">Programmer, Cinematographer</h4>
-                            <h3 className="lead font-weight-light">Eastlake 2021</h3>
-                        </Col>
+        <div>
+            <Controller>
+                <Scene duration={50} pin={true} enabled={true}>
+                    <Row className="justify-content-center py-5" xs={2} sm={2} md={4} lg={4} xl={5}>
+                        <Image src={Background} roundedCircle fluid />
                     </Row>
-                </Container>
-            </Scene>
-        </Controller>
+                </Scene>
+                <Scene duration={1000} pin={true} enabled={true}>
+                    <Container fluid>
+                        <Row className="justify-content-center" >
+                            <Col>
+                                <h1 className="display-1 font-weight-bolder" >Jason Zhang</h1>
+                                <h4 className="display-4 font-weight-light">Programmer, Cinematographer</h4>
+                                <h3 className="lead font-weight-light">Eastlake 2021</h3>
+                            </Col>
+                        </Row>
+                    </Container>
+                </Scene>
+            </Controller>
+        </div>
     )
 }
 
