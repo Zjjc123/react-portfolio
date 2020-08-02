@@ -8,10 +8,7 @@ import { TweenMax, Power3 } from 'gsap';
 import { Controller, Scene } from 'react-scrollmagic'
 import { Tween, Timeline } from 'react-gsap';
 
-import ProjectCard from "../components/Card.js";
-import nodeJsImage from "../img/icons/nodejs.jpg";
-import awsImage from "../img/icons/aws.jpg";
-import bsStudioImage from "../img/icons/bsstudio.jpg";
+import droneVideo from "../img/drone3.mp4";
 
 function Home(props) {
     let nameTitle = useRef()
@@ -48,11 +45,18 @@ function Home(props) {
                 delay: 0.3
             }
         )
+
     }, [])
+
+    const handleVideo = (element, p) => {
+        if (element != null) {
+            element.currentTime = p * 14
+        }
+    }
 
     return (
         <div>
-            <Container fluid id="titleBackground">
+            <Container fluid className="titleBackground">
                 <Row className="justify-content-right" >
                     <Col>
                         <h1 id="homeTitle" ref={el => { nameTitle = el }}
@@ -60,15 +64,14 @@ function Home(props) {
 
                         <h4 id="homeTitle" ref={el => { profTitle = el }} className="display-4 font-weight-light">Programmer Cinematographer</h4>
 
-                        <h3 id="homeTitle" ref={el => { schoolTitle = el }} className="lead font-weight-light">Eastlake 2021</h3>
+                        <h3 id="homeTitle" ref={el => { schoolTitle = el }} className="font-weight-light">Eastlake 2021</h3>
                     </Col>
                 </Row>
             </Container>
-            <Controller id="titleBackground">
+            <Controller>
                 <Scene
                     triggerHook="onLeave"
                     duration={1000}
-                    indicators={true}
                     pin
                 >
                     {(progress) => (
@@ -76,7 +79,7 @@ function Home(props) {
                             <Timeline totalProgress={progress} paused>
                                 <Timeline
                                     target={
-                                        <div className="display-1 font-weight-bolder">
+                                        <div className="heading">
                                             <h2>This is a cool heading</h2>
                                         </div>
                                     }
@@ -94,24 +97,23 @@ function Home(props) {
                     )}
                 </Scene>
             </Controller>
-            <div>
-                <Col>
-                    <ProjectCard
-                        title="Covid Pro-Tips"
-                        description="Responsive, interactive, and professional website hosted with a Node.js server running on an AWS Ubuntu EC2 instance fetching and displaying live Covid-19 data along interactive maps and datatables."
-                        imgSrc={require("../img/projects/covid-pro-tips.png")}
-                        links={[
-                            { name: "Repo", link: "https://github.com/Zjjc123/Covid-Pro-Tips" },
-                            { name: "Website", link: "https://www.webcovid-19.live" }
-                        ]}
-                        icons={[
-                            { img: nodeJsImage },
-                            { img: awsImage },
-                            { img: bsStudioImage }
-                        ]}
-                    />
-                </Col>
-            </div>
+            <Controller>
+                <Scene triggerHook="onLeave"
+                    duration={3000}
+                    pin>
+                    {(progress) => {
+                        return (
+                            <div className="block">
+                                <video ref={el => handleVideo(el, progress)} className="video" src={droneVideo} type="video/mp4"></video>
+                            </div>
+                        )
+                    }}
+                </Scene>
+            </Controller>
+
+            <div className="section" />
+            <div className="section" />
+            <div className="section" />
         </div>
     )
 }
