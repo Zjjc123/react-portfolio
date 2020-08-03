@@ -8,7 +8,9 @@ import { TweenMax, Power3 } from 'gsap';
 import { Controller, Scene } from 'react-scrollmagic'
 import { Tween, Timeline } from 'react-gsap';
 
-import droneVideo from "../img/drone3.mp4";
+import { Image } from 'react-bootstrap'
+
+const videoImages = require.context('../../public/images/droneCompressed', true);
 
 function Home(props) {
     let nameTitle = useRef()
@@ -49,8 +51,17 @@ function Home(props) {
     }, [])
 
     const handleVideo = (element, p) => {
+        p *= 84
+
+        let zeros = ""
+
+        if (p < 10)
+            zeros = "0"
+
+        const name = "./Test" + zeros + Math.floor(p) + ".jpg"
+
         if (element != null) {
-            element.currentTime = p * 14
+            element.src = videoImages(name)
         }
     }
 
@@ -68,6 +79,19 @@ function Home(props) {
                     </Col>
                 </Row>
             </Container>
+            <Controller>
+                <Scene triggerHook="onLeave"
+                    duration={3000}
+                    pin>
+                    {(progress) => {
+                        return (
+                            <div className="block">
+                                <Image ref={el => handleVideo(el, progress)} className="video" />
+                            </div>
+                        )
+                    }}
+                </Scene>
+            </Controller>
             <Controller>
                 <Scene
                     triggerHook="onLeave"
@@ -95,19 +119,6 @@ function Home(props) {
                             </Timeline>
                         </div>
                     )}
-                </Scene>
-            </Controller>
-            <Controller>
-                <Scene triggerHook="onLeave"
-                    duration={3000}
-                    pin>
-                    {(progress) => {
-                        return (
-                            <div className="block">
-                                <video ref={el => handleVideo(el, progress)} className="video" src={droneVideo} type="video/mp4"></video>
-                            </div>
-                        )
-                    }}
                 </Scene>
             </Controller>
 
