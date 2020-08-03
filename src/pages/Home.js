@@ -10,7 +10,7 @@ import { Tween, Timeline } from 'react-gsap';
 
 import { Image } from 'react-bootstrap'
 
-const videoImages = require.context('../../public/images/droneCompressed', true);
+const videoImages = require.context('../../public/images/c2', true);
 
 function Home(props) {
     let nameTitle = useRef()
@@ -51,7 +51,7 @@ function Home(props) {
     }, [])
 
     const handleVideo = (element, p) => {
-        p *= 84
+        p *= 70
 
         let zeros = ""
 
