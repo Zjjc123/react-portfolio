@@ -68,14 +68,14 @@ function Home(props) {
     return (
         <div>
             <Container fluid className="titleBackground">
-                <Row className="justify-content-right" >
+                <Row className="justify-content-center" >
                     <Col>
-                        <h1 id="homeTitle" ref={el => { nameTitle = el }}
-                            className="display-1 font-weight-bolder" >Jason Zhang</h1>
+                        <h1 ref={el => { nameTitle = el }}
+                            className="homeTitle1" >JASON ZHANG</h1>
 
-                        <h4 id="homeTitle" ref={el => { profTitle = el }} className="display-4 font-weight-light">Programmer Cinematographer</h4>
+                        <h4 ref={el => { profTitle = el }} className="homeTitle2">Creative</h4>
 
-                        <h3 id="homeTitle" ref={el => { schoolTitle = el }} className="font-weight-light">Eastlake 2021</h3>
+                        <h3 ref={el => { schoolTitle = el }} className="font-weight-light homeTitle3">Eastlake 2021</h3>
                     </Col>
                 </Row>
             </Container>
@@ -86,6 +86,47 @@ function Home(props) {
                     {(progress) => {
                         return (
                             <div className="block">
+                                <Timeline totalProgress={progress} paused>
+                                    <Timeline
+                                        target={
+                                            <div class="centered">PHOTOGRAPHY</div>
+                                        }
+                                    >
+                                        <Tween
+                                            from={{ opacity: 0, y: '7%' }}
+                                            to={{ opacity: 1, y: '0%' }}
+                                        />
+                                        <Tween
+                                            to={{ opacity: 0, y: '-7%' }}
+                                        />
+                                    </Timeline>
+                                    <Timeline
+                                        target={
+                                            <div class="centered">CINEMATOGRAPHY</div>
+                                        }
+                                    >
+                                        <Tween
+                                            from={{ opacity: 0, y: '7%' }}
+                                            to={{ opacity: 1, y: '0%' }}
+                                        />
+                                        <Tween
+                                            to={{ opacity: 0, y: '-7%' }}
+                                        />
+                                    </Timeline>
+                                    <Timeline
+                                        target={
+                                            <div class="centered">PROGRAMMING</div>
+                                        }
+                                    >
+                                        <Tween
+                                            from={{ opacity: 0, y: '7%' }}
+                                            to={{ opacity: 1, y: '0%' }}
+                                        />
+                                        <Tween
+                                            to={{ opacity: 0, y: '-7%' }}
+                                        />
+                                    </Timeline>
+                                </Timeline>
                                 <Image ref={el => handleVideo(el, progress)} className="video" />
                             </div>
                         )
@@ -103,7 +144,7 @@ function Home(props) {
                             <Timeline totalProgress={progress} paused>
                                 <Timeline
                                     target={
-                                        <div className="heading">
+                                        <div>
                                             <h2>This is a cool heading</h2>
                                         </div>
                                     }

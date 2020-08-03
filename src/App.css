@@ -71,11 +71,28 @@
 
 /* =========== Home Page ===========*/
 
-#homeTitle {
+.homeTitle1 {
   opacity: 0;
-  text-align: right;
+  text-align: center;
   color: white;
-  padding-right: 5%;
+  font-size: 7vw;
+  font-weight: bolder;
+  padding-right: 0;
+}
+
+.homeTitle2 {
+  opacity: 0;
+  text-align: center;
+  color: white;
+  font-size: 4vw;
+}
+
+.homeTitle3 {
+  opacity: 0;
+  text-align: center;
+  color: white;
+  font-size: 2vw;
+  font-weight: lighter;
 }
 
 .titleBackground {
@@ -100,17 +117,23 @@
 .sticky {
   height: 100vh;
   width: 100%;
-  background: linear-gradient(160deg, #e4f5fc 0%,#bfe8f9 26%,#9fd8ef 59%,#0068f2 100%);
   position: relative;
-}
-
-.section {
-  height: 70vh;
-  background: linear-gradient(160deg, #f47c66 0%,#e51906 100%);
 }
 
 .video {
   height: 100%;
   width: 100%;
   object-fit: cover;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 7vw;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  font-weight: bolder;
 }
