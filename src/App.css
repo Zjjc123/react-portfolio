@@ -93,7 +93,7 @@
   color: white;
   font-size: 2vw;
   font-weight: lighter;
-}
+}  
 
 .titleBackground {
   background-image: url("img/CACropped.png");
@@ -101,8 +101,37 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  align-items: center;
+  justify-content: center;
   padding-top: 10%;
   overflow: hidden;
+}
+
+
+@media screen and (max-width: 991px){
+  .homeTitle1 {
+    font-size: 10vw;
+  }
+  
+  .homeTitle2 {
+    font-size: 7vw;
+  }
+  
+  .homeTitle3 {
+    font-size: 4vw;
+  }
+
+  .titleBackground {
+    background-position: -55vw;
+  }
+
+  .heading {
+    margin: 0;
+    position: absolute;
+    top: 40%;
+    -ms-transform: translateY(-40%);
+    transform: translateY(-40%);
+  }
 }
 
 .block {

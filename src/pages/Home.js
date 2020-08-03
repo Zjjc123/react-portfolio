@@ -68,16 +68,16 @@ function Home(props) {
     return (
         <div>
             <Container fluid className="titleBackground">
-                <Row className="justify-content-center" >
-                    <Col>
-                        <h1 ref={el => { nameTitle = el }}
-                            className="homeTitle1" >JASON ZHANG</h1>
+                <Col className="justify-content-center heading">
 
-                        <h4 ref={el => { profTitle = el }} className="homeTitle2">Creative</h4>
+                    <h1 ref={el => { nameTitle = el }}
+                        className="homeTitle1" >JASON ZHANG</h1>
 
-                        <h3 ref={el => { schoolTitle = el }} className="font-weight-light homeTitle3">Eastlake 2021</h3>
-                    </Col>
-                </Row>
+                    <h4 ref={el => { profTitle = el }} className="homeTitle2">Creative</h4>
+
+                    <h3 ref={el => { schoolTitle = el }} className="font-weight-light homeTitle3">Eastlake 2021</h3>
+
+                </Col>
             </Container>
             <Controller>
                 <Scene triggerHook="onLeave"
