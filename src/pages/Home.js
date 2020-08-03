@@ -92,11 +92,11 @@ function Home(props) {
                                         }
                                     >
                                         <Tween
-                                            from={{ opacity: 0, y: '7%' }}
-                                            to={{ opacity: 1, y: '0%' }}
+                                            from={{ opacity: 0}}
+                                            to={{ opacity: 1, y: '-42%' }}
                                         />
                                         <Tween
-                                            to={{ opacity: 0, y: '-7%' }}
+                                            to={{ opacity: 0, y: '-36%' }}
                                         />
                                     </Timeline>
                                     <Timeline
@@ -105,11 +105,11 @@ function Home(props) {
                                         }
                                     >
                                         <Tween
-                                            from={{ opacity: 0, y: '7%' }}
-                                            to={{ opacity: 1, y: '0%' }}
+                                            from={{ opacity: 0}}
+                                            to={{ opacity: 1, y: '-42%' }}
                                         />
                                         <Tween
-                                            to={{ opacity: 0, y: '-7%' }}
+                                            to={{ opacity: 0, y: '-36%' }}
                                         />
                                     </Timeline>
                                     <Timeline
@@ -118,11 +118,11 @@ function Home(props) {
                                         }
                                     >
                                         <Tween
-                                            from={{ opacity: 0, y: '7%' }}
-                                            to={{ opacity: 1, y: '0%' }}
+                                            from={{ opacity: 0}}
+                                            to={{ opacity: 1, y: '-42%' }}
                                         />
                                         <Tween
-                                            to={{ opacity: 0, y: '-7%' }}
+                                            to={{ opacity: 0, y: '-36%' }}
                                         />
                                     </Timeline>
                                 </Timeline>
