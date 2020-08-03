@@ -9,7 +9,7 @@ import { Tween, Timeline } from 'react-gsap';
 
 import { Image } from 'react-bootstrap'
 
-const videoImages = require.context('../../public/images/c2', true);
+const videoImages = require.context('../../public/images/c3', true);
 
 function Home(props) {
     let nameTitle = useRef()
