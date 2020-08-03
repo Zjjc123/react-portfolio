@@ -9,7 +9,10 @@ import { Tween, Timeline } from 'react-gsap';
 
 import { Image } from 'react-bootstrap'
 
-const videoImages = require.context('../../public/images/c3', true);
+import { BrowserView, MobileView } from 'react-device-detect'
+
+const videoImages = require.context('../../public/images/desktop', true);
+const mobileImages = require.context('../../public/images/mobile', true);
 
 function Home(props) {
     let nameTitle = useRef()
@@ -49,8 +52,8 @@ function Home(props) {
 
     }, [])
 
-    const handleVideo = (element, p) => {
-        p *= 70
+    const handleVideo = (element, p, mobile) => {
+        p *= 69
 
         let zeros = ""
 
@@ -60,7 +63,10 @@ function Home(props) {
         const name = "./Test" + zeros + Math.floor(p) + ".jpg"
 
         if (element != null) {
-            element.src = videoImages(name)
+            if (!mobile)
+                element.src = videoImages(name)
+            else
+                element.src = mobileImages(name)
         }
     }
 
@@ -126,7 +132,12 @@ function Home(props) {
                                         />
                                     </Timeline>
                                 </Timeline>
-                                <Image ref={el => handleVideo(el, progress)} className="video" />
+                                <BrowserView>
+                                    <Image ref={el => handleVideo(el, progress, false)} className="video" />
+                                </BrowserView>
+                                <MobileView>
+                                    <Image ref={el => handleVideo(el, progress, true)} className="video" />
+                                </MobileView>
                             </div>
                         )
                     }}
