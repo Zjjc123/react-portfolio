@@ -7,12 +7,14 @@ import { TweenMax, Power3 } from 'gsap';
 import { Controller, Scene } from 'react-scrollmagic'
 import { Tween, Timeline } from 'react-gsap';
 
-import { Image } from 'react-bootstrap'
+import { Image as BImage } from 'react-bootstrap'
 
 import { BrowserView, MobileView } from 'react-device-detect'
 
 const videoImages = require.context('../../public/images/desktop', true);
 const mobileImages = require.context('../../public/images/mobile', true);
+
+const numFrames = 69
 
 function Home(props) {
     let nameTitle = useRef()
@@ -50,10 +52,21 @@ function Home(props) {
             }
         )
 
+        for (var i = 0; i < numFrames; i++) {
+            const img = new Image();
+
+            let zeros = ""
+            if (i < 10)
+                zeros = "0"
+
+            img.src = videoImages("./video" + zeros + i + ".jpg")
+            console.log("loaded: ", "./video" + zeros + i + ".jpg")
+        }
+
     }, [])
 
     const handleVideo = (element, p, mobile) => {
-        p *= 69
+        p *= numFrames
 
         let zeros = ""
 
@@ -133,10 +146,10 @@ function Home(props) {
                                     </Timeline>
                                 </Timeline>
                                 <BrowserView>
-                                    <Image ref={el => handleVideo(el, progress, false)} className="video" />
+                                    <BImage ref={el => handleVideo(el, progress, false)} className="video" />
                                 </BrowserView>
                                 <MobileView>
-                                    <Image ref={el => handleVideo(el, progress, true)} className="video" />
+                                    <BImage ref={el => handleVideo(el, progress, true)} className="video" />
                                 </MobileView>
                             </div>
                         )
