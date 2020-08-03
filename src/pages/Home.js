@@ -60,7 +60,7 @@ function Home(props) {
         if (p < 10)
             zeros = "0"
 
-        const name = "./Test" + zeros + Math.floor(p) + ".jpg"
+        const name = "./video" + zeros + Math.floor(p) + ".jpg"
 
         if (element != null) {
             if (!mobile)
