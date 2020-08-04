@@ -9,7 +9,7 @@ import { Tween, Timeline } from 'react-gsap';
 
 import { Image as BImage } from 'react-bootstrap'
 
-import { BrowserView, MobileView } from 'react-device-detect'
+import { BrowserView, MobileView, isMobile } from 'react-device-detect'
 
 const videoImages = require.context('../../public/images/desktop', true);
 const mobileImages = require.context('../../public/images/mobile', true);
@@ -59,7 +59,11 @@ function Home(props) {
             if (i < 10)
                 zeros = "0"
 
-            img.src = videoImages("./video" + zeros + i + ".jpg")
+            if (!isMobile)
+                img.src = videoImages("./video" + zeros + i + ".jpg")
+            else
+                img.src = mobileImages("./video" + zeros + i + ".jpg")
+
             console.log("loaded: ", "./video" + zeros + i + ".jpg")
         }
 
