@@ -14,7 +14,7 @@ import { BrowserView, MobileView, isMobile } from 'react-device-detect'
 const videoImages = require.context('../../public/images/desktop', true);
 const mobileImages = require.context('../../public/images/mobile', true);
 
-const numFrames = 69
+const numFrames = 139
 
 function Home(props) {
     let nameTitle = useRef()
@@ -53,10 +53,13 @@ function Home(props) {
         )
 
         for (var i = 0; i < numFrames; i++) {
-            const img = new Image();
+            const img = new Image()
 
             let zeros = ""
+
             if (i < 10)
+                zeros = "00"
+            else if (i < 100)
                 zeros = "0"
 
             if (!isMobile)
@@ -75,7 +78,10 @@ function Home(props) {
         let zeros = ""
 
         if (p < 10)
+            zeros = "00"
+        else if (p < 100)
             zeros = "0"
+
 
         const name = "./video" + zeros + Math.floor(p) + ".jpg"
 
