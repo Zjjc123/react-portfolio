@@ -25,7 +25,7 @@ class ProjectCard extends Component {
                 <Card.Img variant="top" src={this.props.imgSrc} />
                 <Card.Body>
                     <Card.Title>{this.props.title}</Card.Title>
-                    <Card.Text>
+                    <Card.Text className="card-description">
                         {this.props.description}
                     </Card.Text>
                     <Row>
