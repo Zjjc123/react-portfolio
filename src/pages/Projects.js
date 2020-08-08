@@ -4,9 +4,6 @@ import Jumbotron from "react-bootstrap/Jumbotron";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Image from "react-bootstrap/Image";
-
-import Background from "../img/jumbotronSquare.jpg";
 
 import nodeJsImage from "../img/icons/nodejs.jpg";
 import awsImage from "../img/icons/aws.jpg";
@@ -21,19 +18,8 @@ import javaImage from "../img/icons/java.jpg";
 function Projects(props) {
     return (
         <Jumbotron className="bg-transparent jumbotron-fluid p-0">
-            <Row className = "justify-content-center py-5" xs = {2} sm = {2} md = {4} lg = {4} xl = {5}>
-                <Image src={Background} roundedCircle fluid/>
-            </Row>
-            <Container fluid>
-                <Row className="justify-content-center" >
-                    <Col>
-                        <h1 className="display-1 font-weight-bolder" >Jason Zhang</h1>
-                        <h3 className="display-4 font-weight-light">My Projects</h3>
-                        <h3 className="lead font-weight-light">Eastlake 2021</h3>
-                    </Col>
-                </Row>
-            </Container>
-            <Container fluid className = "py-5">
+            <h1 className="display-1 font-weight-bolder project-title">My Projects</h1>
+            <Container fluid className="py-5">
                 <Row>
                     <Col style={{ display: 'flex', justifyContent: 'center' }}>
                         <ProjectCard
@@ -44,10 +30,10 @@ function Projects(props) {
                                 { name: "Repo", link: "https://github.com/Zjjc123/Covid-Pro-Tips" },
                                 { name: "Website", link: "https://www.webcovid-19.live" }
                             ]}
-                            icons = {[
-                                {img : nodeJsImage},
-                                {img : awsImage},
-                                {img : bsStudioImage}
+                            icons={[
+                                { img: nodeJsImage },
+                                { img: awsImage },
+                                { img: bsStudioImage }
                             ]}
                         />
                     </Col>
@@ -59,9 +45,9 @@ function Projects(props) {
                             links={[
                                 { name: "Repo", link: "https://github.com/Zjjc123/UniteNEAT" },
                             ]}
-                            icons = {[
-                                {img : unityImage},
-                                {img : csImage},
+                            icons={[
+                                { img: unityImage },
+                                { img: csImage },
                             ]}
                         />
                     </Col>
@@ -73,9 +59,9 @@ function Projects(props) {
                             links={[
                                 { name: "Repo", link: "https://github.com/Zjjc123/Vitality" },
                             ]}
-                            icons = {[
-                                {img : asImage},
-                                {img : javaImage}
+                            icons={[
+                                { img: asImage },
+                                { img: javaImage }
                             ]}
                         />
                     </Col>

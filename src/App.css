@@ -137,6 +137,11 @@ body {
 
 /* =========== Projects ===========*/
 
+.project-title {
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+}
+
 /* ===== Cards ====*/
 .card {
   transition: box-shadow .3s;
