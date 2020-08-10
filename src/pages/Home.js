@@ -96,15 +96,15 @@ function Home(props) {
     return (
         <div>
             <Container fluid className="titleBackground">
-                <Col className="justify-content-center heading">
-
+                <div className="bar-1" />
+                <Col className="heading">
                     <h1 ref={el => { nameTitle = el }}
                         className="homeTitle1" >JASON ZHANG</h1>
 
                     <h4 ref={el => { profTitle = el }} className="homeTitle2">Creative</h4>
-
+                </Col>
+                <Col className="heading2">
                     <h3 ref={el => { schoolTitle = el }} className="font-weight-light homeTitle3">Eastlake 2021</h3>
-
                 </Col>
             </Container>
             <Controller>

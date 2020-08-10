@@ -18,7 +18,7 @@ import javaImage from "../img/icons/java.jpg";
 function Projects(props) {
     return (
         <Jumbotron className="bg-transparent jumbotron-fluid p-0">
-            <h1 className="display-1 font-weight-bolder project-title">My Projects</h1>
+            <h1 className="display-1 font-weight-bolder project-title">Projects</h1>
             <Container fluid className="py-5">
                 <Row>
                     <Col style={{ display: 'flex', justifyContent: 'center' }}>

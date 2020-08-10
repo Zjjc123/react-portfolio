@@ -4,12 +4,34 @@
   font-family: 'LuluBold';
 }
 
+.navbar {
+  background: none !important;
+  background-color: transparent !important;
+  overflow: hidden;
+  position: absolute !important;
+  justify-content:space-between !important; 
+  align-items: center !important;
+  flex-wrap: wrap;
+  width: 100vw !important;
+  padding-right: 5% !important;
+}
+
 #basic-navbar-nav {
   font-size: small;
 }
 
+.navbar-toggle {
+  background-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.navbar-text {
+  color: white !important;
+}
+
 body {
   overflow-x: hidden;
+  height:100%; 
+  margin:0;
 }
 
 #loading {
@@ -28,30 +50,52 @@ body {
 
 /* =========== Home Page ===========*/
 
+.heading {
+  background-color: rgba(0, 0, 0, 0.5);
+  float: right;
+  width: 60% !important;
+  padding-top: 30px;
+  margin-right: 3vw;
+  justify-content: center;
+}
+
+.heading2 {
+  float: right;
+  justify-content: center;
+}
+
+.bar-1 {
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 30%;
+  height: 10px;
+  transform: translateX(223%);
+  margin-bottom: 10px;
+}
+
 .homeTitle1 {
   opacity: 0;
-  text-align: center;
+  text-align: right;
   color: white;
-  font-size: 7vw;
+  font-size: 5vw;
   font-weight: bolder;
-  padding-right: 0;
-  padding-bottom: 1%;
+  margin-top: 10px;
+  padding-bottom: 10px;
 }
 
 .homeTitle2 {
   opacity: 0;
   text-align: center;
   color: white;
-  font-size: 4vw;
-  padding-bottom: .5%;
+  font-size: 3vw;
 }
 
 .homeTitle3 {
   opacity: 0;
-  text-align: center;
+  text-align: right;
   color: white;
-  font-size: 1.5vw;
-  font-weight: lighter;
+  font-size: 1.6vw;
+  margin-top: 40px;
+  margin-right: 1.7vw;
 }  
 
 .titleBackground {
@@ -60,8 +104,6 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  align-items: center;
-  justify-content: center;
   padding-top: 30vh;
   overflow: hidden;
 }
@@ -70,27 +112,52 @@ body {
 @media screen and (max-width: 991px){
   .homeTitle1 {
     font-size: 14vw;
+    text-align: center;
   }
   
   .homeTitle2 {
     font-size: 7vw;
+    text-align: center;
   }
   
   .homeTitle3 {
     font-size: 3vw;
+    text-align: center;
   }
 
   .titleBackground {
-    background-position: -55vw;
+    background-color: transparent;
+    background-position: -40vw;
     padding-top: 0vh;
   }
 
   .heading {
+    background-color: transparent;
     margin: 0;
     position: absolute;
     top: 40%;
     -ms-transform: translateY(-40%);
     transform: translateY(-40%);
+    width: 100% !important;
+    padding-top: 0;
+    margin-right: 0;
+  }
+
+  .heading2 {
+    background-color: transparent;
+    margin: 0;
+    position: absolute;
+    top: 40%;
+    -ms-transform: translateY(-40%);
+    transform: translateY(-40%);
+    width: 100% !important;
+    padding-top: 0;
+    margin-right: 0;
+    float: none;
+  }
+
+  .bar-1 {
+    background-color: transparent;
   }
 }
 
@@ -184,13 +251,6 @@ body {
     margin: 20px;
     padding-left: 50px;
   }
-
-  #about {
-    background-image: url('img/WideWhite.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-  }
 }
 @media screen and (max-width: 991px){
   #aboutText {
@@ -204,6 +264,9 @@ body {
   }
 }
 
+.sticky-bottom {
+  margin-top: 4vh;
+}
 
 /* =========== Fonts ===========*/
 

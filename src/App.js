@@ -22,7 +22,7 @@ class App extends Component {
       <div id="loading">
         <HashRouter basename={process.env.PUBLIC_URL} >
           <div className="App">
-            <Navbar bg="transparent" expand="lg">
+            <Navbar className="navbar" expand="lg">
               <Navbar.Brand href="/">
                 <img
                   src={logo}
@@ -32,14 +32,14 @@ class App extends Component {
                   alt="Logo"
                 />
               </Navbar.Brand>
-              <Navbar.Brand href="/">Jason Zhang</Navbar.Brand>
-              <Navbar.Toggle aria-controls="basic-navbar-nav" />
+              <Navbar.Brand className="navbar-text" href="/">Jason Zhang</Navbar.Brand>
+              <Navbar.Toggle aria-controls="basic-navbar-nav" className="navbar-toggle" />
               <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="ml-auto">
-                  <Nav.Link href="/#">Home</Nav.Link>
-                  <Nav.Link href="/#/projects">Projects</Nav.Link>
-                  <Nav.Link href="/#/about">About</Nav.Link>
-                  <Nav.Link href="/#/gallery">Gallery</Nav.Link>
+                  <Nav.Link className="navbar-text" href="/#">Home</Nav.Link>
+                  <Nav.Link className="navbar-text" href="/#/projects">Projects</Nav.Link>
+                  <Nav.Link className="navbar-text" href="/#/about">About</Nav.Link>
+                  <Nav.Link className="navbar-text" href="/#/gallery">Gallery</Nav.Link>
                 </Nav>
               </Navbar.Collapse>
             </Navbar>
