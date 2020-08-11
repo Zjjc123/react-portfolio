@@ -168,7 +168,7 @@
 
 /* ===== Page ====*/
 .jumbotron {
-  min-height: calc(100vh - 113px);
+  min-height: 100vh;
   margin: 0px !important;
 }
 
