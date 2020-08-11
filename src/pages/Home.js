@@ -21,6 +21,7 @@ function Home(props) {
     let profTitle = useRef()
     let schoolTitle = useRef()
 
+
     useEffect(() => {
         TweenMax.to(
             nameTitle,
@@ -97,7 +98,7 @@ function Home(props) {
         <div>
             <Container fluid className="titleBackground">
                 <div className="bar-1" />
-                <Col className="heading">
+                <Col className="heading" >
                     <h1 ref={el => { nameTitle = el }}
                         className="homeTitle1" >JASON ZHANG</h1>
 
@@ -166,39 +167,6 @@ function Home(props) {
                     }}
                 </Scene>
             </Controller>
-            <Controller>
-                <Scene
-                    triggerHook="onLeave"
-                    duration={1000}
-                    pin
-                >
-                    {(progress) => (
-                        <div className="sticky">
-                            <Timeline totalProgress={progress} paused>
-                                <Timeline
-                                    target={
-                                        <div>
-                                            <h2>This is a cool heading</h2>
-                                        </div>
-                                    }
-                                >
-                                    <Tween
-                                        from={{ opacity: 0 }}
-                                        to={{ opacity: 1 }}
-                                    />
-                                    <Tween
-                                        to={{ x: '110%' }}
-                                    />
-                                </Timeline>
-                            </Timeline>
-                        </div>
-                    )}
-                </Scene>
-            </Controller>
-
-            <div className="section" />
-            <div className="section" />
-            <div className="section" />
         </div>
     )
 }
