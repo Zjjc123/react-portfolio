@@ -6,6 +6,18 @@
 
 /* =========== Navbar ===========*/
 
+.navbar {
+  background: none !important;
+  background-color: transparent !important;
+  overflow: hidden;
+  position: absolute !important;
+  justify-content:space-between !important; 
+  align-items: center !important;
+  flex-wrap: wrap;
+  width: 100vw !important;
+  z-index: 100;
+}
+
 #basic-navbar-nav {
   font-size: small;
 }
@@ -38,6 +50,7 @@
   position: absolute;
   top: 40%;
   left: 5%;
+  text-align: right;
   z-index: 1;
 }
 
@@ -50,11 +63,13 @@
 .homeTitle2 {
   opacity: 0;
   font-size: 3vw;
+  margin-right: 10px;
 }
 
 .homeTitle3 {
   opacity: 0;
   font-size: 1.6vw;
+  margin-right: 20px;
 }  
 
 @media screen and (max-width: 991px){
