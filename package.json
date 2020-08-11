@@ -8,6 +8,7 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "bootstrap": "^4.4.1",
+    "framer-motion": "^2.3.0",
     "gsap": "^3.4.2",
     "pace": "0.0.4",
     "pace-js": "^1.0.2",

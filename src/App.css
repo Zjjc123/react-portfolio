@@ -4,17 +4,7 @@
   font-family: 'LuluBold';
 }
 
-.navbar {
-  background: none !important;
-  background-color: transparent !important;
-  overflow: hidden;
-  position: absolute !important;
-  justify-content:space-between !important; 
-  align-items: center !important;
-  flex-wrap: wrap;
-  width: 100vw !important;
-  padding-right: 2% !important;
-}
+/* =========== Navbar ===========*/
 
 #basic-navbar-nav {
   font-size: small;
@@ -24,92 +14,62 @@
   background-color: rgba(255, 255, 255, 0.5) !important;
 }
 
-.navbar-text {
-  color: white !important;
-}
-
-body {
-  overflow-x: hidden;
-  height:100%; 
-  margin:0;
-}
-
-#loading {
-  animation-name: FadeAnim;
-  animation-duration: 1s;
-}
-
-@keyframes FadeAnim {
-  0% {
-     opacity: 0;
-  }
-  100% {
-     opacity: 1;
-  }
-}
-
 /* =========== Home Page ===========*/
 
+.titleBackground {
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  z-index: -100;
+}
+
+.background-video {
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -100;
+}
+
 .heading {
-  background-color: rgba(0, 0, 0, 0.5);
-  float: right;
-  width: 60% !important;
-  padding-top: 30px;
-  margin-right: 3vw;
-  justify-content: center;
-}
-
-.heading2 {
-  float: right;
-  justify-content: center;
-}
-
-.bar-1 {
-  background-color: rgba(255, 255, 255, 0.5);
-  width: 30%;
-  height: 10px;
-  transform: translateX(223%);
-  margin-bottom: 10px;
+  position: absolute;
+  top: 40%;
+  left: 5%;
+  z-index: 1;
 }
 
 .homeTitle1 {
   opacity: 0;
-  text-align: right;
-  color: white;
   font-size: 5vw;
   font-weight: bolder;
-  margin-top: 10px;
-  padding-bottom: 10px;
 }
 
 .homeTitle2 {
   opacity: 0;
-  text-align: center;
-  color: white;
   font-size: 3vw;
 }
 
 .homeTitle3 {
   opacity: 0;
-  text-align: right;
-  color: white;
   font-size: 1.6vw;
-  margin-top: 40px;
-  margin-right: 1.7vw;
 }  
 
-.titleBackground {
-  background-image: url("img/CACropped.jpg");
-  height: 100vh;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding-top: 30vh;
-  overflow: hidden;
-}
-
-
 @media screen and (max-width: 991px){
+  .titleBackground {
+    background-position: -40vw;
+    padding-top: 0vh;
+  }
+
+  .heading {
+    margin: 0;
+    top: 40%;
+    -ms-transform: translateY(-40%);
+    transform: translateY(-40%);
+  }
+
   .homeTitle1 {
     font-size: 14vw;
     text-align: center;
@@ -119,45 +79,10 @@ body {
     font-size: 7vw;
     text-align: center;
   }
-  
+
   .homeTitle3 {
     font-size: 3vw;
     text-align: center;
-  }
-
-  .titleBackground {
-    background-color: transparent;
-    background-position: -40vw;
-    padding-top: 0vh;
-  }
-
-  .heading {
-    background-color: transparent;
-    margin: 0;
-    position: absolute;
-    top: 40%;
-    -ms-transform: translateY(-40%);
-    transform: translateY(-40%);
-    width: 100% !important;
-    padding-top: 0;
-    margin-right: 0;
-  }
-
-  .heading2 {
-    background-color: transparent;
-    margin: 0;
-    position: absolute;
-    top: 40%;
-    -ms-transform: translateY(-40%);
-    transform: translateY(-40%);
-    width: 100% !important;
-    padding-top: 0;
-    margin-right: 0;
-    float: none;
-  }
-
-  .bar-1 {
-    background-color: transparent;
   }
 }
 
@@ -262,10 +187,6 @@ body {
   #about {
     background-color: transparent;
   }
-}
-
-.sticky-bottom {
-  margin-top: 4vh;
 }
 
 /* =========== Fonts ===========*/

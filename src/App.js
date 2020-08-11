@@ -19,7 +19,7 @@ import Nav from 'react-bootstrap/Nav';
 class App extends Component {
   render() {
     return (
-      <div id="loading">
+      <div>
         <HashRouter basename={process.env.PUBLIC_URL} >
           <div className="App">
             <Navbar className="navbar" expand="lg">

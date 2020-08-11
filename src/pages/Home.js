@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from "react";
 import Container from "react-bootstrap/Container";
-import Col from "react-bootstrap/Col";
 
 import { TweenMax, Power3 } from 'gsap';
 
@@ -13,6 +12,8 @@ import { BrowserView, MobileView, isMobile } from 'react-device-detect'
 
 const videoImages = require.context('../../public/images/desktop', true);
 const mobileImages = require.context('../../public/images/mobile', true);
+
+const videos = require.context("../../public/videos", true);
 
 const numFrames = 139
 
@@ -97,16 +98,17 @@ function Home(props) {
     return (
         <div>
             <Container fluid className="titleBackground">
-                <div className="bar-1" />
-                <Col className="heading" >
+                <BrowserView>
+                    <video className="background-video" loop autoPlay muted>
+                        <source src={videos("./landing.mp4")} type="video/mp4" />
+                    </video>
+                </BrowserView>
+                <div className="heading">
                     <h1 ref={el => { nameTitle = el }}
                         className="homeTitle1" >JASON ZHANG</h1>
-
                     <h4 ref={el => { profTitle = el }} className="homeTitle2">Creative</h4>
-                </Col>
-                <Col className="heading2">
                     <h3 ref={el => { schoolTitle = el }} className="font-weight-light homeTitle3">Eastlake 2021</h3>
-                </Col>
+                </div>
             </Container>
             <Controller>
                 <Scene triggerHook="onLeave"
