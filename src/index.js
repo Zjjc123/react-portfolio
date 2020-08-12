@@ -5,10 +5,14 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import 'pace-js'
 import 'pace-js/themes/blue/pace-theme-minimal.css'
+import { HashRouter } from 'react-router-dom'
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <HashRouter basename={process.env.PUBLIC_URL} >
+      <App />
+    </HashRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );

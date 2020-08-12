@@ -55,19 +55,16 @@
 }
 
 .homeTitle1 {
-  opacity: 0;
   font-size: 5vw;
   font-weight: bolder;
 }
 
 .homeTitle2 {
-  opacity: 0;
   font-size: 3vw;
   margin-right: 10px;
 }
 
 .homeTitle3 {
-  opacity: 0;
   font-size: 1.6vw;
   margin-right: 20px;
 }  

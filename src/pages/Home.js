@@ -1,7 +1,5 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect } from "react";
 import Container from "react-bootstrap/Container";
-
-import { TweenMax, Power3 } from 'gsap';
 
 import { Controller, Scene } from 'react-scrollmagic'
 import { Tween, Timeline } from 'react-gsap';
@@ -10,50 +8,19 @@ import { Image as BImage } from 'react-bootstrap'
 
 import { BrowserView, MobileView, isMobile } from 'react-device-detect'
 
+import { motion } from 'framer-motion'
+
 const videoImages = require.context('../../public/images/desktop', true);
 const mobileImages = require.context('../../public/images/mobile', true);
 
 const videos = require.context("../../public/videos", true);
 
+const transition = { duration: 0.6, ease: [0.6, 0.01, -0.05, 0.9] }
+
 const numFrames = 139
 
-function Home(props) {
-    let nameTitle = useRef()
-    let profTitle = useRef()
-    let schoolTitle = useRef()
-
-
+function Home() {
     useEffect(() => {
-        TweenMax.to(
-            nameTitle,
-            2.0,
-            {
-                opacity: 1,
-                y: -30,
-                ease: Power3.easeOut
-            }
-        )
-        TweenMax.to(
-            profTitle,
-            2.0,
-            {
-                opacity: 1,
-                y: -30,
-                ease: Power3.easeOut,
-                delay: 0.3
-            }
-        )
-        TweenMax.to(
-            schoolTitle,
-            2.0,
-            {
-                opacity: 1,
-                y: -30,
-                ease: Power3.easeOut,
-                delay: 0.3
-            }
-        )
-
         for (var i = 0; i < numFrames; i++) {
             const img = new Image()
 
@@ -96,18 +63,36 @@ function Home(props) {
     }
 
     return (
-        <div>
+        <motion.div>
             <Container fluid className="titleBackground">
                 <BrowserView>
-                    <video className="background-video" loop autoPlay muted>
-                        <source src={videos("./landing.mp4")} type="video/mp4" />
-                    </video>
+                    <motion.div
+                        initial={{ opacity: 0, scale: 1.1 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        exit={{ opacity: 0, scale: 1.1 }}
+                        transition={transition}>
+                        <video className="background-video" loop autoPlay muted>
+                            <source src={videos("./landing.mp4")} type="video/mp4" />
+                        </video>
+                    </motion.div>
                 </BrowserView>
                 <div className="heading">
-                    <h1 ref={el => { nameTitle = el }}
-                        className="homeTitle1" >JASON ZHANG</h1>
-                    <h4 ref={el => { profTitle = el }} className="homeTitle2">Creative</h4>
-                    <h3 ref={el => { schoolTitle = el }} className="font-weight-light homeTitle3">Eastlake 2021</h3>
+                    <motion.h1
+                        initial={{ opacity: 0, y: -10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ x: "-150%" }}
+                        transition={transition}
+                        className="homeTitle1" >JASON ZHANG</motion.h1>
+                    <motion.h4 exit={{ x: "-150%" }}
+                        initial={{ opacity: 0, y: -10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.2, ...transition }}
+                        className="homeTitle2">Creative</motion.h4>
+                    <motion.h3 exit={{ x: "-150%" }}
+                        initial={{ opacity: 0, y: -10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.4, ...transition }}
+                        className="font-weight-light homeTitle3">Eastlake 2021</motion.h3>
                 </div>
             </Container>
             <Controller>
@@ -169,7 +154,7 @@ function Home(props) {
                     }}
                 </Scene>
             </Controller>
-        </div>
+        </motion.div >
     )
 }
 
