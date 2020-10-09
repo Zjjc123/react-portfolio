@@ -1,59 +1,77 @@
-import React, { Suspense } from "react"
-import { Canvas } from "react-three-fiber";
+import React, { Suspense, useRef, useState } from "react"
+import { Canvas, useFrame } from "react-three-fiber";
 
-import { useFBXLoader, OrbitControls } from 'drei'
+import { useFBXLoader, OrbitControls, softShadows } from 'drei'
 
-import { Section } from "../Section";
+import { useSpring, a } from "react-spring/three";
 
 const modelPath = require.context('../../../public/model')
 
-const Model = () => {
-    const fbx = useFBXLoader(modelPath('./dslr.fbx'));
-    return <primitive object={fbx} dispose={null} />;
+softShadows()
+
+const Model = ({ position, path, scale }) => {
+    const fbx = useFBXLoader(modelPath(path));
+
+    const mesh = useRef(null);
+    useFrame(() => (mesh.current.rotation.x = mesh.current.rotation.y += 0.001));
+
+    const [expand, setExpand] = useState();
+
+    const props = useSpring({
+        scale: expand ? [scale * 1.1, scale * 1.1, scale * 1.1] : [scale, scale, scale]
+    })
+
+    return (
+        <a.mesh
+            onPointerOver={() => setExpand(true)}
+            onPointerOut={() => setExpand(false)}
+            ref={mesh}
+            position={position}
+            scale={props.scale}>
+            <primitive object={fbx} dispose={null} />
+        </a.mesh>
+    )
 }
 
 const Lights = () => {
     return (
-      <>
-        {/* Ambient Light illuminates lights for all objects */}
-        <ambientLight intensity={0.3} />
-        {/* Diretion light */}
-        <directionalLight position={[10, 10, 5]} intensity={1} />
-        <directionalLight
-          castShadow
-          position={[0, 10, 0]}
-          intensity={1.5}
-          shadow-mapSize-width={1024}
-          shadow-mapSize-height={1024}
-          shadow-camera-far={50}
-          shadow-camera-left={-10}
-          shadow-camera-right={10}
-          shadow-camera-top={10}
-          shadow-camera-bottom={-10}
-        />
-        {/* Spotlight Large overhead light */}
-        <spotLight intensity={1} position={[1000, 0, 0]} castShadow />
-      </>
+        <>
+            {/* Ambient Light illuminates lights for all objects */}
+            <ambientLight intensity={0.3} />
+            {/* Diretion light */}
+            <directionalLight position={[10, 10, 5]} intensity={1} />
+            <directionalLight
+                position={[0, 10, 0]}
+                intensity={1.5}
+                shadow-mapSize-width={1024}
+                shadow-mapSize-height={1024}
+                shadow-camera-far={50}
+                shadow-camera-left={-10}
+                shadow-camera-right={10}
+                shadow-camera-top={10}
+                shadow-camera-bottom={-10}
+            />
+            {/* Spotlight Large overhead light */}
+            <spotLight intensity={1} position={[1000, 0, 0]} castShadow />
+        </>
     );
-  };
+};
 
 function AboutController() {
     return (
         <Canvas
             colorManagement
-            camera={{ position: [0, 0, 120], fov: 70 }}
+            camera={{ position: [-5, 20, 10], fov: 60 }}
         >
-            <Lights />
             <Suspense fallback={null}>
-                <Section factor={1.5} offset={1}>
-                    <group position={[0, 200, 0]}>
-                        <mesh position={[0, 50, 100]}>
-                            <Model />
-                        </mesh>
-                    </group>
-                </ Section>
+                <Lights />
+                <Model path={"./dslr.fbx"} position={[0, 5, 0]} scale={0.7} />
+                <Model path={"./hw7.fbx"} position={[10, 5, 15]} scale={0.7} />
+                <OrbitControls
+                    enablePan={('Pan', false)}
+                    enableZoom={('Zoom', true)}
+                    enableRotate={('Rotate', true)} />
             </Suspense>
-            <OrbitControls />
         </Canvas>
     )
 }
