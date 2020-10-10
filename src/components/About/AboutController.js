@@ -1,6 +1,8 @@
 import React, { Suspense, useRef, useState } from "react"
 import { Canvas } from "react-three-fiber";
 
+import { useHistory } from 'react-router-dom';
+
 import { useGLTFLoader, OrbitControls, useProgress } from 'drei'
 
 import { useSpring, a } from "react-spring/three";
@@ -8,7 +10,7 @@ import { useTransition, a as a2 } from "@react-spring/web";
 
 const modelPath = require.context('../../../public/model')
 
-const Model = ({ position, path, scale, pop = false, rotation }) => {
+const Model = ({ position, path, scale, pop = false, rotation, onClick }) => {
     const gltf = useGLTFLoader(modelPath(path));
     const mesh = useRef(null);
     // useFrame(() => (mesh.current.rotation.y += 0.001));
@@ -23,6 +25,7 @@ const Model = ({ position, path, scale, pop = false, rotation }) => {
         <a.mesh
             onPointerOver={() => setExpand(true)}
             onPointerOut={() => setExpand(false)}
+            onClick={onClick}
             ref={mesh}
             position={position}
             rotation={rotation}
@@ -76,6 +79,7 @@ const Lights = () => {
 };
 
 function AboutController() {
+    const history = useHistory();
     return (
         <>
             <Canvas
@@ -85,7 +89,16 @@ function AboutController() {
                 <Suspense fallback={null}>
                     <Lights />
                     <Model path={"./desk.glb"} scale={10} />
-                    <Model path={"./camera.glb"} rotation={[0, -1, 0]} position={[-5, 5.3, 0]} scale={1} pop />
+                    <Model
+                        path={"./camera.glb"}
+                        rotation={[0, -1, 0]}
+                        position={[-5, 5.3, 0]}
+                        scale={1}
+                        pop
+                        onClick={() => {
+                            history.push('gallery')
+                        }}
+                    />
                 </Suspense>
                 <OrbitControls
                     enablePan={('Pan', false)}
