@@ -109,11 +109,11 @@ function Home() {
                                         }
                                     >
                                         <Tween
-                                            from={{ opacity: 0, yPercent: "-60" }}
-                                            to={{ opacity: 1, yPercent: "-40" }}
+                                            from={{ opacity: 0, xPercent: 50, yPercent: "-60" }}
+                                            to={{ opacity: 1, xPercentx: 50, yPercent: "-40" }}
                                         />
                                         <Tween
-                                            to={{ opacity: 0, yPercent: "-20" }}
+                                            to={{ opacity: 0, xPercent: 50, yPercent: "-20" }}
                                         />
                                     </Timeline>
                                     <Timeline
@@ -122,11 +122,11 @@ function Home() {
                                         }
                                     >
                                         <Tween
-                                            from={{ opacity: 0, yPercent: "-60" }}
-                                            to={{ opacity: 1, yPercent: "-40" }}
+                                            from={{ opacity: 0, xPercent: 50, yPercent: "-60" }}
+                                            to={{ opacity: 1, xPercent: 50, yPercent: "-40" }}
                                         />
                                         <Tween
-                                            to={{ opacity: 0, yPercent: "-20" }}
+                                            to={{ opacity: 0, xPercent: 50, yPercent: "-20" }}
                                         />
                                     </Timeline>
                                     <Timeline
@@ -135,11 +135,11 @@ function Home() {
                                         }
                                     >
                                         <Tween
-                                            from={{ opacity: 0, yPercent: "-60" }}
-                                            to={{ opacity: 1, yPercent: "-40" }}
+                                            from={{ opacity: 0, xPercent: 50, yPercent: "-60" }}
+                                            to={{ opacity: 1, xPercent: 50, yPercent: "-40" }}
                                         />
                                         <Tween
-                                            to={{ opacity: 0, yPercent: "-20" }}
+                                            to={{ opacity: 0, xPercent: 50, yPercent: "-20" }}
                                         />
                                     </Timeline>
                                 </Timeline>
