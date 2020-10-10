@@ -19,7 +19,11 @@ html, body, #root, .App {
   font-family: 'LuluBold';
 }
 
-canvas { outline: none; border: none; }
+canvas { 
+  outline: none; 
+  border: none; 
+  background:black;
+}
 
 /* =========== Navbar ===========*/
 
@@ -46,10 +50,34 @@ canvas { outline: none; border: none; }
 .navbar-text {
   margin-left: 10px;
   margin-right: 10px;
+  color: #FFBF4E !important;
 }
 
 .navbar-text:hover {
   text-decoration: none;
+}
+
+/* =========== Loading ===========*/
+
+.loading {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: #171717;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.loading-bar {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 3px;
+  background:f1c40f;
 }
 
 /* =========== Home Page ===========*/
@@ -153,10 +181,10 @@ canvas { outline: none; border: none; }
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
   font-size: 5vw;
   text-align: center;
   font-weight: bolder;
+  color: white;
 }
 
 @media screen and (max-width: 991px){
@@ -168,8 +196,31 @@ canvas { outline: none; border: none; }
 /* =========== Projects ===========*/
 
 .project-title {
-  padding-top: 10vh;
-  padding-bottom: 10vh;
+  font-size: 100px;
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+
+@media screen and (max-width: 991px){
+  .project-title {
+    font-size: 50px;
+    padding-top: 100px;
+    padding-bottom: 25px;
+  }
+}
+
+/* =========== Gallery ===========*/
+
+.gallery-title {
+  font-size: 75px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+@media screen and (max-width: 991px){
+  .gallery-title {
+    font-size: 25px;
+  }
 }
 
 /* ===== Cards ====*/

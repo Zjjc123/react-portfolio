@@ -16,7 +16,7 @@ function Gallery(props) {
         alignItems: 'center',
         justifyContent: 'center',
       }} className="bg-transparent jumbotron-fluid">
-        <h1>Under Construction</h1>
+        <h1 className="gallery-title">Under Construction</h1>
       </Jumbotron>
     </motion.div>
   )

@@ -9,8 +9,6 @@ import Projects from './pages/Projects.js';
 import About from './pages/About.js';
 import Gallery from './pages/Gallery.js';
 
-import Footer from './components/Footer.js';
-
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Navbar from 'react-bootstrap/Navbar';
@@ -42,25 +40,25 @@ const App = () => {
             <motion.a
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              whileHover={{ scale: 1.2, color: "#000" }}
+              whileHover={{ scale: 1.2 }}
               transition={transition}
               className="navbar-text" href="/#">Home</motion.a>
             <motion.a
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              whileHover={{ scale: 1.2, color: "#000" }}
+              whileHover={{ scale: 1.2 }}
               transition={transition}
               className="navbar-text" href="/#/projects">Projects</motion.a>
             <motion.a
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              whileHover={{ scale: 1.2, color: "#000" }}
+              whileHover={{ scale: 1.2 }}
               transition={transition}
               className="navbar-text" href="/#/about">About</motion.a>
             <motion.a
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              whileHover={{ scale: 1.2, color: "#000" }}
+              whileHover={{ scale: 1.2 }}
               transition={transition}
               className="navbar-text" href="/#/gallery">Gallery</motion.a>
           </Nav>

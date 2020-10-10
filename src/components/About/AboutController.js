@@ -1,19 +1,18 @@
 import React, { Suspense, useRef, useState } from "react"
 import { Canvas, useFrame } from "react-three-fiber";
 
-import { useFBXLoader, OrbitControls, softShadows } from 'drei'
+import { useFBXLoader, OrbitControls, useProgress } from 'drei'
 
 import { useSpring, a } from "react-spring/three";
+import { useTransition, a as a2 } from "@react-spring/web";
 
 const modelPath = require.context('../../../public/model')
-
-softShadows()
 
 const Model = ({ position, path, scale }) => {
     const fbx = useFBXLoader(modelPath(path));
 
     const mesh = useRef(null);
-    useFrame(() => (mesh.current.rotation.x = mesh.current.rotation.y += 0.001));
+    useFrame(() => (mesh.current.rotation.y += 0.001));
 
     const [expand, setExpand] = useState();
 
@@ -31,6 +30,24 @@ const Model = ({ position, path, scale }) => {
             <primitive object={fbx} dispose={null} />
         </a.mesh>
     )
+}
+
+const Loader = () => {
+    const { active, progress } = useProgress();
+    const transition = useTransition(active, {
+        from: { opacity: 1, progress: 0 },
+        leave: { opacity: 0 },
+        update: { progress },
+    });
+    const p =  progress + '%';
+    return transition(
+        ({ opacity }, active) =>
+            active && (
+                <a2.div className='loading' style={{ opacity }}>
+                    <a2.div className='loading-bar' style={{ width: p}}></a2.div>
+                </a2.div>
+            )
+    );
 }
 
 const Lights = () => {
@@ -59,20 +76,23 @@ const Lights = () => {
 
 function AboutController() {
     return (
-        <Canvas
-            colorManagement
-            camera={{ position: [-5, 20, 10], fov: 60 }}
-        >
-            <Suspense fallback={null}>
-                <Lights />
-                <Model path={"./dslr.fbx"} position={[0, 5, 0]} scale={0.7} />
-                <Model path={"./hw7.fbx"} position={[10, 5, 15]} scale={0.7} />
-                <OrbitControls
-                    enablePan={('Pan', false)}
-                    enableZoom={('Zoom', true)}
-                    enableRotate={('Rotate', true)} />
-            </Suspense>
-        </Canvas>
+        <>
+            <Canvas
+                colorManagement
+                camera={{ position: [-5, 20, 10], fov: 60 }}
+            >
+                <Suspense fallback={null}>
+                    <Lights />
+                    <Model path={"./dslr.fbx"} position={[0, 5, 0]} scale={0.7} />
+                    <Model path={"./hw7.fbx"} position={[10, 5, 15]} scale={0.7} />
+                    <OrbitControls
+                        enablePan={('Pan', false)}
+                        enableZoom={('Zoom', true)}
+                        enableRotate={('Rotate', true)} />
+                </Suspense>
+            </Canvas>
+            <Loader />
+        </>
     )
 }
 
