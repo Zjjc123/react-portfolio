@@ -82,6 +82,12 @@ canvas {
   margin-right: 10px;
 }
 
+.loading-text {
+  font-size: small;
+  color: #FFBF4E;
+  margin-bottom: 50px;
+}
+
 /* =========== Home Page ===========*/
 
 .titleBackground {
@@ -182,7 +188,7 @@ canvas {
   position: absolute;
   top: 50%;
   right: 50%;
-  font-size: 5vw;
+  font-size: 4vw;
   font-weight: bolder;
   color: white;
 }

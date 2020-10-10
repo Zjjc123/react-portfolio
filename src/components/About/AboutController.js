@@ -1,23 +1,22 @@
 import React, { Suspense, useRef, useState } from "react"
-import { Canvas, useFrame } from "react-three-fiber";
+import { Canvas } from "react-three-fiber";
 
-import { useFBXLoader, OrbitControls, useProgress } from 'drei'
+import { useGLTFLoader, OrbitControls, useProgress } from 'drei'
 
 import { useSpring, a } from "react-spring/three";
 import { useTransition, a as a2 } from "@react-spring/web";
 
 const modelPath = require.context('../../../public/model')
 
-const Model = ({ position, path, scale }) => {
-    const fbx = useFBXLoader(modelPath(path));
-
+const Model = ({ position, path, scale, pop = false, rotation }) => {
+    const gltf = useGLTFLoader(modelPath(path));
     const mesh = useRef(null);
-    useFrame(() => (mesh.current.rotation.y += 0.001));
+    // useFrame(() => (mesh.current.rotation.y += 0.001));
 
     const [expand, setExpand] = useState();
 
     const props = useSpring({
-        scale: expand ? [scale * 1.1, scale * 1.1, scale * 1.1] : [scale, scale, scale]
+        scale: (expand && pop) ? [scale * 1.1, scale * 1.1, scale * 1.1] : [scale, scale, scale]
     })
 
     return (
@@ -26,8 +25,9 @@ const Model = ({ position, path, scale }) => {
             onPointerOut={() => setExpand(false)}
             ref={mesh}
             position={position}
+            rotation={rotation}
             scale={props.scale}>
-            <primitive object={fbx} dispose={null} />
+            <primitive object={gltf.scene} dispose={null} />
         </a.mesh>
     )
 }
@@ -39,12 +39,13 @@ const Loader = () => {
         leave: { opacity: 0 },
         update: { progress },
     });
-    const p =  progress + '%';
+    const p = progress + '%';
     return transition(
         ({ opacity }, active) =>
             active && (
                 <a2.div className='loading' style={{ opacity }}>
-                    <a2.div className='loading-bar' style={{ width: p}}></a2.div>
+                    <h1 className='loading-text'>Journey Before Destination</h1>
+                    <a2.div className='loading-bar' style={{ width: p }}></a2.div>
                 </a2.div>
             )
     );
@@ -79,17 +80,18 @@ function AboutController() {
         <>
             <Canvas
                 colorManagement
-                camera={{ position: [-5, 20, 10], fov: 60 }}
+                camera={{ position: [0, 15, 20], fov: 60 }}
             >
                 <Suspense fallback={null}>
                     <Lights />
-                    <Model path={"./dslr.fbx"} position={[0, 5, 0]} scale={0.7} />
-                    <Model path={"./hw7.fbx"} position={[10, 5, 15]} scale={0.7} />
-                    <OrbitControls
-                        enablePan={('Pan', false)}
-                        enableZoom={('Zoom', true)}
-                        enableRotate={('Rotate', true)} />
+                    <Model path={"./desk.glb"} scale={10} />
+                    <Model path={"./camera.glb"} rotation={[0, -1, 0]} position={[-5, 5.3, 0]} scale={1} pop />
                 </Suspense>
+                <OrbitControls
+                    enablePan={('Pan', false)}
+                    enableZoom={('Zoom', false)}
+                    enableRotate={('Rotate', true)}
+                />
             </Canvas>
             <Loader />
         </>
