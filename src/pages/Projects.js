@@ -16,17 +16,18 @@ import csImage from "../img/icons/cs.jpg";
 import asImage from "../img/icons/androidstudio.jpg";
 import javaImage from "../img/icons/java.jpg";
 
-const transition = { duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96] }
+const transition = { duration: 1, ease: [0.43, 0.13, 0.23, 0.96] }
 
 function Projects(props) {
     return (
-        <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={transition}>
+        <motion.div>
             <Jumbotron className="bg-transparent jumbotron-fluid p-0">
-                <h1 className="project-title">Projects</h1>
+                <motion.h1
+                    initial={{ opacity: 0, x: "-50%" }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: "50%" }}
+                    transition={ transition }
+                    className="project-title">Projects</motion.h1>
                 <Row>
                     <Col style={{ display: 'flex', justifyContent: 'center' }}>
                         <ProjectCard
