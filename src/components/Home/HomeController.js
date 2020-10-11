@@ -12,7 +12,7 @@ import { motion } from "framer-motion";
 
 const modelPath = require.context('../../../public/model')
 
-const transition = { delay: 4, duration: 1, ease: [0.43, 0.13, 0.23, 0.96] }
+const transition = { duration: 1, ease: [0.43, 0.13, 0.23, 0.96] }
 
 const Model = ({ position, path, scale, pop = false, rotation, onClick, link = false }) => {
     const gltf = useGLTFLoader(modelPath(path));
@@ -142,11 +142,17 @@ function AboutController() {
                     enableRotate={('Rotate', true)}
                 />
             </Canvas>
+            <motion.h1
+                className="tool-tip-main not-selectable"
+                initial={{ opacity: 0, y: 40 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{delay: 4, ...transition}}
+            > Welcome! </motion.h1>
             <motion.h2
-                className="tool-tip"
+                className="tool-tip not-selectable"
                 initial={{ opacity: 0, x: -40 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={transition}
+                transition={{delay: 8, ...transition}}
             > Drag and Click </motion.h2>
             <Loader />
         </motion.div>
