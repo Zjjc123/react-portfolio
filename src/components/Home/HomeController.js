@@ -8,7 +8,11 @@ import { useGLTFLoader, OrbitControls, useProgress } from 'drei'
 import { useSpring, a } from "react-spring/three";
 import { useTransition, a as a2 } from "@react-spring/web";
 
+import { motion } from "framer-motion";
+
 const modelPath = require.context('../../../public/model')
+
+const transition = { delay: 4, duration: 1, ease: [0.43, 0.13, 0.23, 0.96] }
 
 const Model = ({ position, path, scale, pop = false, rotation, onClick, link = false }) => {
     const gltf = useGLTFLoader(modelPath(path));
@@ -101,7 +105,7 @@ function AboutController() {
     const history = useHistory();
 
     return (
-        <>
+        <motion.div className="full-container">
             <Canvas
                 colorManagement
                 camera={{ position: [0, 15, 20], fov: 60 }}
@@ -138,8 +142,14 @@ function AboutController() {
                     enableRotate={('Rotate', true)}
                 />
             </Canvas>
+            <motion.h2
+                className="tool-tip"
+                initial={{ opacity: 0, x: -40 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={transition}
+            > Drag and Click </motion.h2>
             <Loader />
-        </>
+        </motion.div>
     )
 }
 

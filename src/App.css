@@ -215,6 +215,15 @@ canvas {
   }
 }
 
+/* =========== About ===========*/
+
+.tool-tip {
+  position: absolute;
+  bottom: 0;
+  color: #FFBF4E;
+  margin-bottom: 30px;
+}
+
 /* =========== Gallery ===========*/
 
 .gallery-title {
