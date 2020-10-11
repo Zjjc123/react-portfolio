@@ -10,10 +10,9 @@ import { useTransition, a as a2 } from "@react-spring/web";
 
 const modelPath = require.context('../../../public/model')
 
-const Model = ({ position, path, scale, pop = false, rotation, onClick }) => {
+const Model = ({ position, path, scale, pop = false, rotation, onClick, link = false }) => {
     const gltf = useGLTFLoader(modelPath(path));
     const mesh = useRef(null);
-    // useFrame(() => (mesh.current.rotation.y += 0.001));
 
     const [expand, setExpand] = useState();
 
@@ -21,11 +20,31 @@ const Model = ({ position, path, scale, pop = false, rotation, onClick }) => {
         scale: (expand && pop) ? [scale * 1.1, scale * 1.1, scale * 1.1] : [scale, scale, scale]
     })
 
+    const [clickAble, setClickable] = useState(true);
+
+    const mouseDownCoords = e => {
+        window.checkForDrag = e.clientX;
+    };
+
+    const clickOrDrag = e => {
+        if (link && clickAble) {
+            const mouseUp = e.clientX;
+            if (
+                mouseUp < window.checkForDrag + 6 &&
+                mouseUp > window.checkForDrag - 6
+            ) {
+                onClick();
+                setClickable(false);
+            }
+        }
+    };
+
     return (
         <a.mesh
             onPointerOver={() => setExpand(true)}
             onPointerOut={() => setExpand(false)}
-            onClick={onClick}
+            onPointerDown={mouseDownCoords}
+            onPointerUp={clickOrDrag}
             ref={mesh}
             position={position}
             rotation={rotation}
@@ -42,7 +61,7 @@ const Loader = () => {
         leave: { opacity: 0 },
         update: { progress },
     });
-    const p = progress + '%';
+    const p = progress - 4 + '%';
     return transition(
         ({ opacity }, active) =>
             active && (
@@ -80,6 +99,7 @@ const Lights = () => {
 
 function AboutController() {
     const history = useHistory();
+
     return (
         <>
             <Canvas
@@ -98,6 +118,7 @@ function AboutController() {
                         onClick={() => {
                             history.push('gallery')
                         }}
+                        link
                     />
                 </Suspense>
                 <OrbitControls

@@ -78,8 +78,8 @@ canvas {
   left: 0;
   height: 3px;
   background: #FFBF4E;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: 2%;
+  margin-right: 2%;
 }
 
 .loading-text {
