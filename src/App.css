@@ -19,10 +19,12 @@ html, body, #root, .App {
   font-family: 'LuluBold';
 }
 
-canvas { 
-  outline: none; 
-  border: none; 
-  background:black;
+.not-selectable {
+  -webkit-user-select: none; /* Safari */        
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
+  pointer-events: none;
 }
 
 /* =========== Navbar ===========*/
@@ -90,6 +92,38 @@ canvas {
 
 /* =========== Home Page ===========*/
 
+canvas { 
+  outline: none; 
+  border: none; 
+  background:black;
+}
+
+.tool-tip-main {
+  position: absolute;
+  bottom: 0;
+  color: #FFBF4E;
+  font-size: 8vw;
+  bottom: 40%;
+  overflow: hidden;
+}
+
+.tool-tip {
+  position: absolute;
+  bottom: 0;
+  color: #FFBF4E;
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 991px){
+  .tool-tip-main {
+    font-size: 50px;
+  }
+  .tool-tip {
+    font-size: 20px;
+  }
+}
+
+/* =========== About ===========*/
 .titleBackground {
   height: 100vh;
   background-position: center;
@@ -212,40 +246,6 @@ canvas {
     font-size: 50px;
     padding-top: 100px;
     padding-bottom: 25px;
-  }
-}
-
-/* =========== About ===========*/
-
-.not-selectable {
-  -webkit-user-select: none; /* Safari */        
-  -moz-user-select: none; /* Firefox */
-  -ms-user-select: none; /* IE10+/Edge */
-  user-select: none; /* Standard */
-}
-
-.tool-tip-main {
-  position: absolute;
-  bottom: 0;
-  color: #FFBF4E;
-  font-size: 8vw;
-  bottom: 40%;
-  overflow: hidden;
-}
-
-.tool-tip {
-  position: absolute;
-  bottom: 0;
-  color: #FFBF4E;
-  margin-bottom: 30px;
-}
-
-@media screen and (max-width: 991px){
-  .tool-tip-main {
-    font-size: 50px;
-  }
-  .tool-tip {
-    font-size: 20px;
   }
 }
 

@@ -82,17 +82,17 @@ function About() {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ x: "-150%" }}
                         transition={transition}
-                        className="homeTitle1" >JASON ZHANG</motion.h1>
+                        className="homeTitle1 not-selectable" >JASON ZHANG</motion.h1>
                     <motion.h4 exit={{ x: "-150%" }}
                         initial={{ opacity: 0, y: -10 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.2, ...transition }}
-                        className="homeTitle2">Creative</motion.h4>
+                        className="homeTitle2 not-selectable">Creative</motion.h4>
                     <motion.h3 exit={{ x: "-150%" }}
                         initial={{ opacity: 0, y: -10 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.4, ...transition }}
-                        className="font-weight-light homeTitle3">Eastlake 2021</motion.h3>
+                        className="font-weight-light homeTitle3 not-selectable">Eastlake 2021</motion.h3>
                 </div>
             </Container>
             <Controller>
@@ -105,7 +105,7 @@ function About() {
                                 <Timeline totalProgress={progress} paused>
                                     <Timeline
                                         target={
-                                            <div class="centered">PHOTOGRAPHY</div>
+                                            <div class="centered not-selectable">PHOTOGRAPHY</div>
                                         }
                                     >
                                         <Tween
@@ -118,7 +118,7 @@ function About() {
                                     </Timeline>
                                     <Timeline
                                         target={
-                                            <div class="centered">CINEMATOGRAPHY</div>
+                                            <div class="centered not-selectable">CINEMATOGRAPHY</div>
                                         }
                                     >
                                         <Tween
@@ -131,7 +131,7 @@ function About() {
                                     </Timeline>
                                     <Timeline
                                         target={
-                                            <div class="centered">PROGRAMMING</div>
+                                            <div class="centered not-selectable">PROGRAMMING</div>
                                         }
                                     >
                                         <Tween
