@@ -120,6 +120,17 @@ function AboutController() {
                         }}
                         link
                     />
+                    <Model
+                        path={"./computer.glb"}
+                        rotation={[0, 0, 0]}
+                        position={[1, 7, 0]}
+                        scale={2}
+                        pop
+                        onClick={() => {
+                            history.push('projects')
+                        }}
+                        link
+                    />
                 </Suspense>
                 <OrbitControls
                     enablePan={('Pan', false)}
