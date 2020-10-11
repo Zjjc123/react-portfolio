@@ -1,7 +1,6 @@
 import React from "react"
-import Jumbotron from "react-bootstrap/Jumbotron"
-import Container from "react-bootstrap/Container"
 import { motion } from 'framer-motion'
+import AboutController from "../components/About/AboutController"
 
 const transition = { duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96] }
 
@@ -11,16 +10,9 @@ function About(props) {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      transition={transition}>
-      <Jumbotron id="about" style={{
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-      }} className="bg-transparent jumbotron-fluid">
-        <Container fluid className="justify-content-center">
-          <h1>Under Construction</h1>
-        </Container>
-      </Jumbotron>
+      transition={transition}
+      className="full-container">
+      <AboutController />
     </motion.div>
   )
 }
