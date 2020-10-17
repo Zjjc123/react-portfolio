@@ -10,11 +10,6 @@ import { BrowserView, MobileView, isMobile } from 'react-device-detect'
 
 import { motion } from 'framer-motion'
 
-const videoImages = require.context('../../public/images/desktop', true);
-const mobileImages = require.context('../../public/images/mobile', true);
-
-const videos = require.context("../../public/videos", true);
-
 const transition = { duration: 0.6, ease: [0.6, 0.01, -0.05, 0.9] }
 
 const numFrames = 139
@@ -32,11 +27,9 @@ function About() {
                 zeros = "0"
 
             if (!isMobile)
-                img.src = videoImages("./video" + zeros + i + ".jpg")
+                img.src = process.env.PUBLIC_URL + "images/desktop/video/" + zeros + i + ".jpg"
             else
-                img.src = mobileImages("./video" + zeros + i + ".jpg")
-
-            console.log("loaded: ", "./video" + zeros + i + ".jpg")
+                img.src = process.env.PUBLIC_URL + "images/mobile/video/" + zeros + i + ".jpg"
         }
 
     }, [])
@@ -52,13 +45,13 @@ function About() {
             zeros = "0"
 
 
-        const name = "./video" + zeros + Math.floor(p) + ".jpg"
+        const name = "/video" + zeros + Math.floor(p) + ".jpg"
 
         if (element != null) {
             if (!mobile)
-                element.src = videoImages(name)
+                element.src = process.env.PUBLIC_URL + "/images/desktop/" + name;
             else
-                element.src = mobileImages(name)
+                element.src = process.env.PUBLIC_URL + "/images/mobile/" + name;
         }
     }
 
@@ -72,7 +65,7 @@ function About() {
                         exit={{ opacity: 0, scale: 1.1 }}
                         transition={transition}>
                         <video className="background-video" loop autoPlay muted>
-                            <source src={videos("./landing.mp4")} type="video/mp4" />
+                            <source src={process.env.PUBLIC_URL + "/videos/landing.mp4"} type="video/mp4" />
                         </video>
                     </motion.div>
                 </BrowserView>
