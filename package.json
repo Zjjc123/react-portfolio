@@ -19,6 +19,7 @@
     "react-device-detect": "^1.13.1",
     "react-dom": "^16.13.1",
     "react-gsap": "^2.2.1",
+    "react-lazy-load": "^3.1.13",
     "react-router-dom": "^5.1.2",
     "react-scripts": "^3.4.3",
     "react-scrollmagic": "^2.2.0",

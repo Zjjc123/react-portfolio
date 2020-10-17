@@ -263,6 +263,45 @@ canvas {
   }
 }
 
+.img-grid {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 30px;
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+.img-wrap {
+  padding-bottom: 50px;
+}
+.img-wrap img {
+  object-fit: cover;
+  object-position: center;
+  width: 65vw;
+  height: 65vw;
+}
+
+@media screen and (min-width: 992px){
+  .img-grid {
+    padding-left: 7vw;
+    padding-right: 7vw;
+  }
+
+  .img-wrap {
+    padding-bottom: 20px;
+    width: 100%;
+    width: 33%;
+  }
+  
+  .img-wrap img {
+    width: 20vw;
+    height: 20vw;
+  }
+}
+
 /* ===== Cards ====*/
 .card {
   transition: box-shadow .3s;
