@@ -1,11 +1,10 @@
 import React from "react"
 import Jumbotron from "react-bootstrap/Jumbotron"
-import { motion } from 'framer-motion'
 import ImageGrid from "../components/Gallery/ImageGrid"
 
 function Gallery(props) {
   return (
-    <motion.div>
+    <div>
       <Jumbotron style={{
         display: 'flex',
         alignItems: 'center',
@@ -13,7 +12,7 @@ function Gallery(props) {
       }} className="bg-transparent jumbotron-fluid">
         <ImageGrid />
       </Jumbotron>
-    </motion.div>
+    </div>
   )
 }
 

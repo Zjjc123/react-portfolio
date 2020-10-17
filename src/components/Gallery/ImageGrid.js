@@ -11,15 +11,15 @@ function ImageGrid() {
     return (
         <div className="img-grid">
             {image_list.images.map(img =>
-                <motion.div className="img-wrap" key={img.dir} >
+                <div className="img-wrap" key={img.dir} >
                     <LazyLoad>
                         <motion.img src={img_src + img.dir} alt={img.alt}
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
-                            transition={{ delay: 1 }}
+                            exit={{ opacity: 0 }}
                         />
                     </LazyLoad>
-                </motion.div>
+                </div>
             )}
         </div>
     )
