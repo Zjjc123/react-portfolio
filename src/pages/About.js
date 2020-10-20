@@ -27,9 +27,9 @@ function About() {
                 zeros = "0"
 
             if (!isMobile)
-                img.src = process.env.PUBLIC_URL + "images/desktop/video/" + zeros + i + ".jpg"
+                img.src = process.env.PUBLIC_URL + "/images/desktop/video/" + zeros + i + ".jpg"
             else
-                img.src = process.env.PUBLIC_URL + "images/mobile/video/" + zeros + i + ".jpg"
+                img.src = process.env.PUBLIC_URL + "/images/mobile/video/" + zeros + i + ".jpg"
         }
 
     }, [])
