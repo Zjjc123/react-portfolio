@@ -1,6 +1,6 @@
-import React from "react"
-import Jumbotron from "react-bootstrap/Jumbotron"
-import ImageGrid from "../components/Gallery/ImageGrid"
+import React from "react";
+import Jumbotron from "react-bootstrap/Jumbotron";
+import ImageGrid from "../components/Gallery/ImageGrid";
 
 function Gallery(props) {
   return (
