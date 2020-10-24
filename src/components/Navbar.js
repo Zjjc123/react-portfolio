@@ -23,7 +23,7 @@ const NavBar = () => {
                     alt="Logo"
                 />
             </Navbar.Brand>
-            <Navbar.Brand className="navbar-text" href="/">Jason Zhang</Navbar.Brand>
+            <Navbar.Brand className="navbar-text" href="/">JASON ZHANG</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" className="navbar-toggle" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="ml-auto">
@@ -32,25 +32,25 @@ const NavBar = () => {
                         animate={{ opacity: 1, y: 0 }}
                         whileHover={{ scale: 1.2 }}
                         transition={transition}
-                        className="navbar-text" href="/#">Home</motion.a>
+                        className="navbar-text" href="/#">HOME</motion.a>
                     <motion.a
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
                         whileHover={{ scale: 1.2 }}
                         transition={transition}
-                        className="navbar-text" href="/#/projects">Projects</motion.a>
+                        className="navbar-text" href="/#/projects">PROJECTS</motion.a>
                     <motion.a
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
                         whileHover={{ scale: 1.2 }}
                         transition={transition}
-                        className="navbar-text" href="/#/about">About</motion.a>
+                        className="navbar-text" href="/#/about">ABOUT</motion.a>
                     <motion.a
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
                         whileHover={{ scale: 1.2 }}
                         transition={transition}
-                        className="navbar-text" href="/#/gallery">Gallery</motion.a>
+                        className="navbar-text" href="/#/gallery">GALLERY</motion.a>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>

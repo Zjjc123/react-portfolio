@@ -29,12 +29,12 @@ function Landing() {
                         initial={{ opacity: 0, y: -10 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.2, ...transition }}
-                        className="homeTitle2 not-selectable">Creative</motion.h4>
+                        className="homeTitle2 not-selectable">CREATIVE</motion.h4>
                     <motion.h3 exit={{ x: "-150%" }}
                         initial={{ opacity: 0, y: -10 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.4, ...transition }}
-                        className="font-weight-light homeTitle3 not-selectable">Eastlake 2021</motion.h3>
+                        className="font-weight-light homeTitle3 not-selectable">EASTLAKE 2021</motion.h3>
                 </div>
             </Container>
         </motion.div >

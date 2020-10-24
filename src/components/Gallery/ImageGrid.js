@@ -1,5 +1,5 @@
 import React from 'react';
-import LazyLoad from 'react-lazy-load';
+import LazyLoad from 'react-lazyload';
 
 import { motion } from 'framer-motion';
 
@@ -11,15 +11,16 @@ function ImageGrid() {
     return (
         <div className="img-grid">
             {image_list.images.map(img =>
-                <div className="img-wrap" key={img.dir} >
+                <motion.div className="img-wrap" key={img.dir} >
                     <LazyLoad>
                         <motion.img src={img_src + img.dir} alt={img.alt}
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
+                            transition={{ duration: 1 }}
+                            initial={{ opacity: 0, y: -10 }}
+                            animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0 }}
                         />
                     </LazyLoad>
-                </div>
+                </motion.div>
             )}
         </div>
     )

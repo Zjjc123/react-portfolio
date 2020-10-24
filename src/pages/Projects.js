@@ -18,7 +18,7 @@ import javaImage from "../img/icons/java.jpg";
 
 const transition = { duration: 1, ease: [0.43, 0.13, 0.23, 0.96] }
 
-function Projects(props) {
+function Projects() {
     return (
         <motion.div>
             <Jumbotron className="bg-transparent jumbotron-fluid p-0">
@@ -27,7 +27,7 @@ function Projects(props) {
                     animate={{ opacity: 1, x: 0 }}
                     exit={{ opacity: 0, x: "50%" }}
                     transition={ transition }
-                    className="project-title">Projects</motion.h1>
+                    className="project-title">PROJECTS</motion.h1>
                 <Row>
                     <Col style={{ display: 'flex', justifyContent: 'center' }}>
                         <ProjectCard

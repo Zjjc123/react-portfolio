@@ -1,6 +1,17 @@
-html, body, #root, .App {
-  height: 100%;
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,700&display=swap");
+
+@import "./variables.scss";
+
+body,
+html {
+  user-select: none;
+  background: $white;
+  overscroll-behavior: none;
   margin: 0;
+  font-family: "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .full-container {
@@ -16,11 +27,10 @@ html, body, #root, .App {
 .App {
   text-align: center;
   box-sizing: border-box;
-  font-family: 'LuluBold';
 }
 
 .not-selectable {
-  -webkit-user-select: none; /* Safari */        
+  -webkit-user-select: none; /* Safari */
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* IE10+/Edge */
   user-select: none; /* Standard */
@@ -34,7 +44,7 @@ html, body, #root, .App {
   background-color: transparent !important;
   overflow: hidden;
   position: absolute !important;
-  justify-content:space-between !important; 
+  justify-content: space-between !important;
   align-items: center !important;
   flex-wrap: wrap;
   width: 100vw !important;
@@ -79,14 +89,14 @@ html, body, #root, .App {
   top: 50%;
   left: 0;
   height: 3px;
-  background: #FFBF4E;
+  background: #ffbf4e;
   margin-left: 2%;
   margin-right: 2%;
 }
 
 .loading-text {
   font-size: small;
-  color: #FFBF4E;
+  color: #ffbf4e;
   margin-bottom: 50px;
 }
 
@@ -119,21 +129,19 @@ html, body, #root, .App {
 }
 
 .homeTitle1 {
-  font-size: 5vw;
+  font-size: 8vw;
   font-weight: bolder;
 }
 
 .homeTitle2 {
-  font-size: 3vw;
-  margin-right: 10px;
+  font-size: 5vw;
 }
 
 .homeTitle3 {
-  font-size: 1.6vw;
-  margin-right: 20px;
-}  
+  font-size: 3vw;
+}
 
-@media screen and (max-width: 991px){
+@media screen and (max-width: 991px) {
   .titleBackground {
     background-position: -40vw;
     padding-top: 0vh;
@@ -150,7 +158,7 @@ html, body, #root, .App {
     font-size: 14vw;
     text-align: center;
   }
-  
+
   .homeTitle2 {
     font-size: 7vw;
     text-align: center;
@@ -170,7 +178,7 @@ html, body, #root, .App {
   padding-bottom: 50px;
 }
 
-@media screen and (max-width: 991px){
+@media screen and (max-width: 991px) {
   .project-title {
     font-size: 50px;
     padding-top: 100px;
@@ -186,7 +194,7 @@ html, body, #root, .App {
   margin-right: 20px;
 }
 
-@media screen and (max-width: 991px){
+@media screen and (max-width: 991px) {
   .gallery-title {
     font-size: 25px;
   }
@@ -213,7 +221,7 @@ html, body, #root, .App {
   height: 65vw;
 }
 
-@media screen and (min-width: 992px){
+@media screen and (min-width: 992px) {
   .img-grid {
     margin-left: 17vw;
     margin-right: 17vw;
@@ -224,7 +232,7 @@ html, body, #root, .App {
     width: 100%;
     width: 33%;
   }
-  
+
   .img-wrap img {
     width: 20vw;
     height: 20vw;
@@ -233,19 +241,12 @@ html, body, #root, .App {
 
 /* ===== Cards ====*/
 .card {
-  transition: box-shadow .3s;
+  transition: box-shadow 0.3s;
   margin: 20px;
 }
 
 .card:hover {
-  box-shadow: 0 0 11px rgba(33,33,33,.2); 
-}
-
-.card-description {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  font-size: medium;
+  box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
 }
 
 /* ===== Page ====*/
@@ -266,15 +267,14 @@ html, body, #root, .App {
   border-radius: 10px !important;
 }
 
-
-@media screen and (min-width: 992px){
+@media screen and (min-width: 992px) {
   #aboutText {
     text-align: left;
     margin: 20px;
     padding-left: 50px;
   }
 }
-@media screen and (max-width: 991px){
+@media screen and (max-width: 991px) {
   #aboutText {
     text-align: center;
     padding-left: 15px;
@@ -284,11 +284,4 @@ html, body, #root, .App {
   #about {
     background-color: transparent;
   }
-}
-
-/* =========== Fonts ===========*/
-
-@font-face {
-  font-family: LuluBold;
-  src: local('LuluBold'), url(./fonts/LuluBold.ttf) format('truetype')
 }
