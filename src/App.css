@@ -52,11 +52,11 @@ html, body, #root, .App {
 .navbar-text {
   margin-left: 10px;
   margin-right: 10px;
-  color: #FFBF4E !important;
 }
 
 .navbar-text:hover {
   text-decoration: none;
+  color: black !important;
 }
 
 /* =========== Loading ===========*/

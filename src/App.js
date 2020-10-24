@@ -4,7 +4,7 @@ import './App.css';
 
 import { Route, Switch, useLocation } from 'react-router-dom';
 
-import Home from "./pages/Home.js"
+import Landing from "./pages/Landing.js"
 import Projects from './pages/Projects.js';
 import About from './pages/About.js';
 import Gallery from './pages/Gallery.js';
@@ -66,7 +66,7 @@ const App = () => {
       </Navbar>
       <AnimatePresence exitBeforeEnter>
         <Switch location={location} key={location.pathname}>
-          <Route exact path={'/'} component={Home} />
+          <Route exact path={'/'} component={Landing} />
           <Route exact path={'/projects'} component={Projects} />
           <Route exact path={'/about'} component={About} />
           <Route exact path={'/gallery'} component={Gallery} />
