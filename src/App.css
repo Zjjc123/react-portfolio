@@ -90,40 +90,8 @@ html, body, #root, .App {
   margin-bottom: 50px;
 }
 
-/* =========== Home Page ===========*/
-
-canvas { 
-  outline: none; 
-  border: none; 
-  background:black;
-}
-
-.tool-tip-main {
-  position: absolute;
-  bottom: 0;
-  color: #FFBF4E;
-  font-size: 8vw;
-  bottom: 40%;
-  overflow: hidden;
-}
-
-.tool-tip {
-  position: absolute;
-  bottom: 0;
-  color: #FFBF4E;
-  margin-bottom: 30px;
-}
-
-@media screen and (max-width: 991px){
-  .tool-tip-main {
-    font-size: 50px;
-  }
-  .tool-tip {
-    font-size: 20px;
-  }
-}
-
 /* =========== About ===========*/
+
 .titleBackground {
   height: 100vh;
   background-position: center;
@@ -194,45 +162,6 @@ canvas {
   }
 }
 
-.block {
-  height: 100vh;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  overflow: hidden;
-}
-
-
-.sticky {
-  height: 100vh;
-  width: 100%;
-  position: relative;
-}
-
-.video {
-  height: 100%;
-  height: 100vh;
-  width: 100%;
-  object-fit: cover;
-  overflow: hidden;
-  justify-content: center;
-}
-
-.centered {
-  position: absolute;
-  top: 50%;
-  right: 50%;
-  font-size: 4vw;
-  font-weight: bolder;
-  color: white;
-}
-
-@media screen and (max-width: 991px){
-  .centered {
-    font-size: 5.5vw;
-  }
-}
-
 /* =========== Projects ===========*/
 
 .project-title {
@@ -286,12 +215,12 @@ canvas {
 
 @media screen and (min-width: 992px){
   .img-grid {
-    padding-left: 7vw;
-    padding-right: 7vw;
+    margin-left: 17vw;
+    margin-right: 17vw;
   }
 
   .img-wrap {
-    padding-bottom: 20px;
+    padding-bottom: 1.5vw;
     width: 100%;
     width: 33%;
   }
