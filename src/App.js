@@ -1,13 +1,13 @@
 import React from 'react';
 import './styles/App.scss';
 
-import NavBar from './components/Navbar';
+import Header from './components/Header';
 import PageRouter from './components/Router';
 
 const App = () => {
     return (
     <div className="App">
-      <NavBar />
+      <Header />
       <PageRouter />
     </div>
   );

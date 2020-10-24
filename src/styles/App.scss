@@ -1,6 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,700&display=swap");
 
+@import "./breakkpoints.scss";
 @import "./variables.scss";
+
+@import "./components/header.scss";
 
 body,
 html {
@@ -37,37 +40,49 @@ html {
   pointer-events: none;
 }
 
-/* =========== Navbar ===========*/
-
-.navbar {
-  background: none !important;
-  background-color: transparent !important;
-  overflow: hidden;
-  position: absolute !important;
-  justify-content: space-between !important;
-  align-items: center !important;
-  flex-wrap: wrap;
-  width: 100vw !important;
-  z-index: 100;
+.container {
+  width: 1560px;
+  min-width: 1560px;
+  margin: 0 auto;
+  height: 100%;
+  @include media("<=1560px") {
+    width: 1280px;
+    min-width: 1280px;
+  }
+  @include media("<=desktop") {
+    width: 1080px;
+    min-width: 1080px;
+  }
+  @include media("<=1080px") {
+    width: 100%;
+    min-width: 100%;
+  }
+  .row {
+    display: flex;
+    height: 100%;
+    padding: 0 32px;
+    @include media("<=phone") {
+      padding: 0 16px;
+    }
+  }
+  .v-center {
+    align-items: center;
+  }
+  .space-between {
+    justify-content: space-between;
+  }
 }
 
-#basic-navbar-nav {
-  font-size: small;
+.container-fluid {
+  width: 100%;
+  height: 100%;
+  .row {
+    display: flex;
+    height: 100%;
+  }
 }
 
-.navbar-toggle {
-  background-color: rgba(255, 255, 255, 0.5) !important;
-}
 
-.navbar-text {
-  margin-left: 10px;
-  margin-right: 10px;
-}
-
-.navbar-text:hover {
-  text-decoration: none;
-  color: black !important;
-}
 
 /* =========== Loading ===========*/
 
