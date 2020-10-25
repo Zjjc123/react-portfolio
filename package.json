@@ -8,6 +8,7 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "bootstrap": "^4.4.1",
+    "css-tree": "^1.0.0-alpha.39",
     "drei": "^1.5.7",
     "framer-motion": "^2.3.0",
     "gsap": "^3.4.2",
