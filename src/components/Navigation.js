@@ -47,12 +47,17 @@ const Navigation = () => {
                                 <li className="nav-info-label">Links</li>
                                 <li>
                                     <NavLink to="/youtube" exact>
-                                        Youtube
+                                        YouTube
+                            </NavLink>
+                                </li>
+                                <li>
+                                    <NavLink to="/youtube" exact>
+                                        Instagram
                             </NavLink>
                                 </li>
                                 <li>
                                     <NavLink to="/linkedin" exact>
-                                        Linked In
+                                        LinkedIn
                             </NavLink>
                                 </li>
                             </ul>

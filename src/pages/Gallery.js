@@ -1,17 +1,10 @@
 import React from "react";
-import Jumbotron from "react-bootstrap/Jumbotron";
 import ImageGrid from "../components/Gallery/ImageGrid";
 
 function Gallery() {
   return (
     <div className="page">
-      <Jumbotron style={{
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-      }} className="bg-transparent jumbotron-fluid">
-        <ImageGrid />
-      </Jumbotron>
+      <ImageGrid />
     </div>
   )
 }
