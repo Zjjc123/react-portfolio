@@ -2,6 +2,10 @@
     "images": [
         {
             "alt": "alt",
+            "dir": "rose1.png"
+        },
+        {
+            "alt": "alt",
             "dir": "claire1.jpg"
         },
         {

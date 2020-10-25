@@ -4,6 +4,7 @@ import Header from './components/Header';
 import PageRouter from './components/Router';
 
 import gsap from 'gsap';
+import Navigation from './components/Navigation';
 
 const App = () => {
   useEffect(() => {
@@ -13,10 +14,13 @@ const App = () => {
     gsap.to('body', 0, { css: { visibility: "visible" } });
   })
   return (
-    <div className="App">
+    <>
       <Header />
-      <PageRouter />
-    </div>
+      <div className="App">
+        <PageRouter />
+      </div>
+      <Navigation />
+    </>
   );
 }
 

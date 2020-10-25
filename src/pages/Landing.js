@@ -37,25 +37,23 @@ function Landing() {
     return (
         <>
             {animationComplete === false ? <IntroOverlay /> : ""}
-            <div className="full">
-                <section className="main">
-                    <div className="container">
-                        <div className='row'>
-                            <h2>
-                                <div className="line">
-                                    <span>Welcome to my portfolio!</span>
-                                </div>
-                                <div className="line">
-                                    <span>I'm Jason Zhang</span>
-                                </div>
-                            </h2>
-                            <div className="btn-row">
-                                <a href="/">about me <RightArrow /> </a>
+            <section className="main">
+                <div className="container">
+                    <div className='row'>
+                        <h2>
+                            <div className="line">
+                                <span>Welcome to my portfolio!</span>
                             </div>
+                            <div className="line">
+                                <span>I'm Jason Zhang</span>
+                            </div>
+                        </h2>
+                        <div className="btn-row">
+                            <a href="/">about me <RightArrow /> </a>
                         </div>
                     </div>
-                </section>
-            </div>
+                </div>
+            </section>
         </>
     )
 }

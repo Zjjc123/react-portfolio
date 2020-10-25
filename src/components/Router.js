@@ -8,16 +8,23 @@ import Gallery from '../pages/Gallery.js';
 
 import { AnimatePresence } from 'framer-motion';
 
+
+const routes = [
+  {path: '/', name: 'Landing', Component: Landing},
+  {path: '/Projects', name: 'Projects', Component: Projects},
+  {path: '/About', name: 'About', Component: About},
+  {path: '/Gallery', name: 'Gallery', Component: Gallery}
+]
+
 const PageRouter = () => {
     let location = useLocation()
 
     return (
     <AnimatePresence exitBeforeEnter>
         <Switch location={location} key={location.pathname}>
-            <Route exact path={'/'} component={Landing} />
-            <Route exact path={'/projects'} component={Projects} />
-            <Route exact path={'/about'} component={About} />
-            <Route exact path={'/gallery'} component={Gallery} />
+            {routes.map(({path, Component}) => (
+                <Route key={path} exact path={path} component={Component} />
+            ))}
         </Switch>
     </AnimatePresence>)
 }

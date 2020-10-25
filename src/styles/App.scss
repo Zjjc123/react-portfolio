@@ -6,6 +6,7 @@
 @import "./components/intro.scss";
 @import "./components/header.scss";
 @import "./components/landing.scss";
+@import "./components/navigation.scss";
 
 body,
 html {
@@ -191,11 +192,6 @@ html {
   z-index: 2;
   transform: translateY(0);
   position: relative;
-}
-
-.full {
-  height: 100vh;
-  width: 100%;
 }
 
 .page {
