@@ -4,7 +4,7 @@ import ImageGrid from "../components/Gallery/ImageGrid";
 
 function Gallery() {
   return (
-    <div>
+    <div className="page">
       <Jumbotron style={{
         display: 'flex',
         alignItems: 'center',

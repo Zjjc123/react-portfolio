@@ -42,7 +42,7 @@ const App = () => {
   })
   return (
     <>
-      <Header />
+      <Header dimensions={dimensions}/>
       <div className="App">
         <PageRouter />
       </div>

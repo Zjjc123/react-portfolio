@@ -3,6 +3,8 @@ import { ReactComponent as RightArrow } from '../assets/arrow-right.svg';
 import IntroOverlay from "../components/IntroOverlay";
 import gsap from 'gsap';
 
+import { NavLink } from 'react-router-dom';
+
 const tl = gsap.timeline();
 
 const homeAnimation = (completeAnimation) => {
@@ -35,7 +37,7 @@ function Landing() {
     }, [])
 
     return (
-        <>
+        <div>
             {animationComplete === false ? <IntroOverlay /> : ""}
             <section className="main">
                 <div className="container">
@@ -49,12 +51,12 @@ function Landing() {
                             </div>
                         </h2>
                         <div className="btn-row">
-                            <a href="/">about me <RightArrow /> </a>
+                            <NavLink to="/about">About me <RightArrow /> </NavLink>
                         </div>
                     </div>
                 </div>
             </section>
-        </>
+        </div>
     )
 }
 

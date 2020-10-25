@@ -1,10 +1,8 @@
 import React from "react";
-import ProjectCard from "../components/Projects/Card.js";
-import Jumbotron from "react-bootstrap/Jumbotron";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
 
-import { motion } from "framer-motion"
+/*
+import ProjectCard from "../components/Projects/Card.js";
+import Col from "react-bootstrap/Col";
 
 import nodeJsImage from "../img/icons/nodejs.jpg";
 import awsImage from "../img/icons/aws.jpg";
@@ -15,20 +13,22 @@ import csImage from "../img/icons/cs.jpg";
 
 import asImage from "../img/icons/androidstudio.jpg";
 import javaImage from "../img/icons/java.jpg";
-
-const transition = { duration: 1, ease: [0.43, 0.13, 0.23, 0.96] }
+*/
 
 function Projects() {
     return (
-        <motion.div>
-            <Jumbotron className="bg-transparent jumbotron-fluid p-0">
-                <motion.h1
-                    initial={{ opacity: 0, x: "-50%" }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: "50%" }}
-                    transition={ transition }
-                    className="project-title">PROJECTS</motion.h1>
-                <Row>
+        <div className='page'>
+            <div className='container'>
+                <div className='row'>
+                    <h3>Project Under Construction</h3>
+                </div>
+            </div>
+        </div>
+        /*
+        <div className="page">
+            <div className='container'>
+                <h1 className="project-title">PROJECTS</h1>
+                <div className='row'>
                     <Col style={{ display: 'flex', justifyContent: 'center' }}>
                         <ProjectCard
                             title="Covid Pro-Tips"
@@ -73,9 +73,10 @@ function Projects() {
                             ]}
                         />
                     </Col>
-                </Row>
-            </Jumbotron>
-        </motion.div>
+                </div>
+            </div>
+        </div>
+        */
     )
 }
 
