@@ -55,6 +55,9 @@ function Landing() {
                         </div>
                     </div>
                 </div>
+                <video className="background-video" loop autoPlay muted>
+                    <source src={process.env.PUBLIC_URL + "/videos/landing.mp4"} type="video/mp4" />
+                </video>
             </section>
         </div>
     )

@@ -26,10 +26,10 @@
                 height: 62px;
                 position: relative;
                 overflow: hidden;
-                @include media('<=tablet') {
+                @include media("<=tablet") {
                     height: 48px;
                 }
-                @include media('<=phone') {
+                @include media("<=phone") {
                     height: 32px;
                 }
                 span {
@@ -48,11 +48,13 @@
                 display: flex;
                 align-items: center;
                 font-weight: 600;
-                @include media('<=tablet') {
+                @include media("<=tablet") {
                     font-size: 1.3rem;
+                    padding-bottom: 150px;
                 }
-                @include media('<=phone') {
+                @include media("<=phone") {
                     font-size: 1.1rem;
+                    padding-bottom: 250px;
                 }
                 svg {
                     margin-left: 16px;
@@ -61,13 +63,13 @@
                     height: 24px;
                     width: 24px;
                     border-radius: 100px;
-                    transition: .4s ease-in-out;
-                    @include media('<=tablet') {
+                    transition: 0.4s ease-in-out;
+                    @include media("<=tablet") {
                         padding: 6px;
                         width: 20px;
                         height: 20px;
                     }
-                    @include media('<=phone') {
+                    @include media("<=phone") {
                         padding: 4px;
                         width: 16px;
                         height: 16px;
@@ -80,6 +82,16 @@
                     }
                 }
             }
+        }
+    }
+    .background-video {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        @include media("<=phone") {
+            object-fit: cover;
+            width: 200%;
         }
     }
 }
