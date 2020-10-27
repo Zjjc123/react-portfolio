@@ -38,9 +38,9 @@ const Navigation = () => {
                             <ul className="nav-info">
                                 <li className="nav-info-label">Email</li>
                                 <li>
-                                    <NavLink to="/contact" exact>
+                                    <a href="mailto:zjjc123@hotmail.com">
                                         Get in touch
-                            </NavLink>
+                            </a>
                                 </li>
                             </ul>
                             <ul className="nav-info">
@@ -51,7 +51,7 @@ const Navigation = () => {
                             </a>
                                 </li>
                                 <li>
-                                <a href="https://www.instagram.com/zjjc123/">
+                                    <a href="https://www.instagram.com/zjjc123/">
                                         Instagram
                             </a>
                                 </li>
