@@ -1,8 +1,6 @@
 import React from "react";
 
-/*
 import ProjectCard from "../components/Projects/Card.js";
-import Col from "react-bootstrap/Col";
 
 import nodeJsImage from "../img/icons/nodejs.jpg";
 import awsImage from "../img/icons/aws.jpg";
@@ -13,23 +11,16 @@ import csImage from "../img/icons/cs.jpg";
 
 import asImage from "../img/icons/androidstudio.jpg";
 import javaImage from "../img/icons/java.jpg";
-*/
 
 function Projects() {
     return (
-        <div className='page'>
-            <div className='container'>
-                <div className='row'>
-                    <h3>Project Under Construction</h3>
-                </div>
-            </div>
-        </div>
-        /*
         <div className="page">
             <div className='container'>
-                <h1 className="project-title">PROJECTS</h1>
                 <div className='row'>
-                    <Col style={{ display: 'flex', justifyContent: 'center' }}>
+                    <h1 className="project-title">PROJECTS</h1>
+                </div>
+                <div className='row'>
+                    <div className='col'>
                         <ProjectCard
                             title="Covid Pro-Tips"
                             description="Responsive, interactive, and professional website hosted with a Node.js server running on an AWS Ubuntu EC2 instance fetching and displaying live Covid-19 data along interactive maps and datatables."
@@ -44,8 +35,8 @@ function Projects() {
                                 { img: bsStudioImage }
                             ]}
                         />
-                    </Col>
-                    <Col style={{ display: 'flex', justifyContent: 'center' }}>
+                    </div>
+                    <div className='col'>
                         <ProjectCard
                             title="Unite NEAT"
                             description="Neural Evolution of Augmenting Topologies Implementation. Using Unity easy Graphical Implementations"
@@ -58,8 +49,8 @@ function Projects() {
                                 { img: csImage },
                             ]}
                         />
-                    </Col>
-                    <Col style={{ display: 'flex', justifyContent: 'center' }}>
+                    </div>
+                    <div className='col'>
                         <ProjectCard
                             title="Vitality"
                             description="Mobile Fitness App built on Android Studio that provides a variety of health-related functionalities like heart rate monitoring and fitness counters. Complete with a minimalistic UI, profile settings, and pinned notifications."
@@ -72,11 +63,10 @@ function Projects() {
                                 { img: javaImage }
                             ]}
                         />
-                    </Col>
+                    </div>
                 </div>
             </div>
         </div>
-        */
     )
 }
 

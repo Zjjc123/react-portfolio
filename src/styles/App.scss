@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,700&display=swap");
-
 @import "./breakkpoints.scss";
 @import "./variables.scss";
 
@@ -7,6 +5,7 @@
 @import "./components/header.scss";
 @import "./components/landing.scss";
 @import "./components/navigation.scss";
+@import "./components/card.scss";
 
 body,
 html {
@@ -67,22 +66,6 @@ body::-webkit-scrollbar {
   .row {
     display: flex;
     height: 100%;
-  }
-}
-
-/* =========== Projects ===========*/
-
-.project-title {
-  font-size: 100px;
-  padding-top: 100px;
-  padding-bottom: 50px;
-}
-
-@media screen and (max-width: 991px) {
-  .project-title {
-    font-size: 50px;
-    padding-top: 100px;
-    padding-bottom: 25px;
   }
 }
 
