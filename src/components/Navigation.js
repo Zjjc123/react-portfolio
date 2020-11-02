@@ -7,8 +7,6 @@ const Navigation = () => {
             <div className="container">
                 <div className="nav-columns">
                     <div className="nav-column">
-                        <div className="nav-label">
-                            Menu</div>
                         <ul className="nav-links">
                             <li>
                                 <NavLink to="/" exact>
@@ -33,7 +31,6 @@ const Navigation = () => {
                         </ul>
                     </div>
                     <div className="nav-column">
-                        <div className="nav-label">Contact</div>
                         <div className="nav-infos">
                             <ul className="nav-info">
                                 <li className="nav-info-label">Email</li>

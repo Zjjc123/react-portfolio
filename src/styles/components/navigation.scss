@@ -50,18 +50,6 @@ nav {
             width: 100%;
           }
         }
-        .nav-label {
-          margin-bottom: 3rem;
-          font-size: 1.2rem;
-          @include media("<=tablet") {
-            font-size: 1rem;
-            margin-bottom: 1.4rem;
-          }
-          @include media("<=phone") {
-            font-size: 0.875rem;
-            margin-bottom: 1.2rem;
-          }
-        }
         .nav-infos {
           display: flex;
           flex-wrap: wrap;
