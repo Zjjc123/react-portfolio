@@ -1,46 +1,24 @@
-import React, { Component } from 'react';
-import Card from 'react-bootstrap/Card';
-import Image from "react-bootstrap/Image";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
+import React from 'react';
 
-class ProjectCard extends Component {
-    render() {
-        let links = this.props.links.map(function (object) {
-            return (
-                <Col>
-                    <Card.Link href={object.link}>{object.name}</Card.Link>
-                </Col>
-            );
-        })
-        let icons = this.props.icons.map(function (object) {
-            return (
-                <Col>
-                    <Image id="badge" fluid src={object.img} />
-                </Col>
-            );
-        })
+function ProjectCard(props) {
+    let links = props.links.map(function (object) {
         return (
-            <div>
-                <Card style={{ width: '20rem' }}>
-                    <Card.Img variant="top" src={this.props.imgSrc} />
-                    <Card.Body>
-                        <Card.Title>{this.props.title}</Card.Title>
-                        <Card.Text className="card-description">
-                            {this.props.description}
-                        </Card.Text>
-                        <Row>
-                            {links}
-                        </Row>
-                        <div className="py-2" />
-                        <Row>
-                            {icons}
-                        </Row>
-                    </Card.Body>
-                </Card>
-            </div>
+            <a href={object.link}>{object.name}</a>
         );
-    }
+    })
+
+    return (
+        <div className="card">
+            <div className="pic">
+                <img src={props.imgSrc} alt="card" />
+            </div>
+            <div className="desc">
+                <h2>{props.title}</h2>
+                <p>{props.description}</p>
+                {links}
+            </div>
+        </div>
+    );
 }
 
 export default ProjectCard;
