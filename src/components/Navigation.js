@@ -60,10 +60,10 @@ const Navigation = () => {
                             </ul>
                             <ul className="nav-info">
                                 <li className="nav-info-label">
-                                    Phone
+                                    Location
                                 </li>
                                 <li>
-                                    +1 (425) 898 3210
+                                    Sammamish, Washington
                                 </li>
                             </ul>
                         </div>
