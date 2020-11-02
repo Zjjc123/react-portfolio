@@ -34,11 +34,12 @@ function Landing() {
 
     useEffect(() => {
         homeAnimation(completeAnimation);
+        window.sessionStorage.setItem("first", 1);
     }, [])
 
     return (
         <div>
-            {animationComplete === false ? <IntroOverlay /> : ""}
+            {(animationComplete === false && window.sessionStorage.getItem("first") === null) ? <IntroOverlay /> : ""}
             <section className="main">
                 <div className="container">
                     <div className='row'>
