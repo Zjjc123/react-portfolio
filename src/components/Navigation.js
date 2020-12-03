@@ -33,11 +33,16 @@ const Navigation = () => {
                     <div className="nav-column">
                         <div className="nav-infos">
                             <ul className="nav-info">
-                                <li className="nav-info-label">Email</li>
+                                <li className="nav-info-label">Contact</li>
                                 <li>
                                     <a href="mailto:zjjc123@hotmail.com">
                                         Get in touch
-                            </a>
+                                    </a>
+                                </li>
+                                <li>
+                                    <NavLink to="/Pricing" exact>
+                                        Pricing
+                                    </NavLink>
                                 </li>
                             </ul>
                             <ul className="nav-info">
