@@ -5,6 +5,11 @@ const Pricing = () => {
         <div className="page">
             <div className="container">
                 <div className="block">
+                    <h1>Payment Information</h1>
+                    <h3>Venmo: @jasonzhang02</h3>
+                    <h3>Paypal: zjjc123@hotmail.com</h3>         
+                </div>
+                <div className="block">
                     <h1>COVID-19 Precautions</h1>
                     <h3>Social distance at ALL times (6ft+)</h3>
                     <h3>Masks on at ALL times (except when picture is being taken)</h3>
