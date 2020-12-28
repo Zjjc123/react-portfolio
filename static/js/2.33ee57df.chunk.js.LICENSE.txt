@@ -5,12 +5,6 @@ object-assign
 */
 
 /*!
-  * Kursor v0.1.5
-  * Forged by Luis Daniel Rovira
-  * Released under the MIT License.
-  */
-
-/*!
  * CSSPlugin 3.4.2
  * https://greensock.com
  *
@@ -44,20 +38,6 @@ MERCHANTABLITY OR NON-INFRINGEMENT.
 See the Apache Version 2.0 License for specific language governing permissions
 and limitations under the License.
 ***************************************************************************** */
-
-/*! no static exports found */
-
-/*!**********************!*\
-        !*** ./src/index.js ***!
-        \**********************/
-
-/*!****************************!*\
-        !*** ./src/utils/index.js ***!
-        \****************************/
-
-/*!*******************************!*\
-        !*** ./src/styles/index.styl ***!
-        \*******************************/
 
 /** @license React v0.19.1
  * scheduler.production.min.js
