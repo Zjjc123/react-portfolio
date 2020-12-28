@@ -53,7 +53,7 @@ const Navigation = () => {
                             </a>
                                 </li>
                                 <li>
-                                    <a href="https://www.instagram.com/zjjc123/">
+                                    <a href="https://www.instagram.com/jasonzhang02/">
                                         Instagram
                             </a>
                                 </li>

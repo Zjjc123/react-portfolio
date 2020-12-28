@@ -3,7 +3,12 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { HashRouter } from 'react-router-dom'
+import kursor from 'kursor';
 
+new kursor ({
+  type: 1,
+  removeDefaultCursor: true
+})
 
 ReactDOM.render(
   <React.StrictMode>
