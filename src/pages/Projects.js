@@ -8,7 +8,7 @@ function Projects() {
                 <div className='projects'>
                     <ProjectCard
                         title="Covid Pro-Tips"
-                        description="Responsive, interactive, and professional website hosted with a Node.js server running on an AWS Ubuntu EC2 instance fetching and displaying live Covid-19 data along interactive maps and datatables."
+                        description="Responsive, interactive, and professional website fetching and displaying live Covid-19 data along interactive maps and datatables."
                         imgSrc={"/images/projects/covid-pro-tips.jpg"}
                         links={[
                             { name: "Repo", link: "https://github.com/Zjjc123/Covid-Pro-Tips" },
@@ -25,7 +25,7 @@ function Projects() {
                     />
                     <ProjectCard
                         title="Vitality"
-                        description="Mobile Fitness App built on Android Studio that provides a variety of health-related functionalities like heart rate monitoring and fitness counters. Complete with a minimalistic UI, profile settings, and pinned notifications."
+                        description="Mobile Fitness App built on Android Studio that provides a variety of health-related functionalities."
                         imgSrc={"/images/projects/vitality.jpg"}
                         links={[
                             { name: "Repo", link: "https://github.com/Zjjc123/Vitality" },

@@ -33,7 +33,8 @@ function Landing() {
     }
 
     useEffect(() => {
-        homeAnimation(completeAnimation);
+        if (window.sessionStorage.getItem("first") === null)
+            homeAnimation(completeAnimation);
         window.sessionStorage.setItem("first", 1);
     }, [])
 

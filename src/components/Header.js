@@ -5,7 +5,7 @@ import { openMenu, closeMenu } from "../animations/menuAnimations";
 
 import { ReactComponent as UpArrow } from '../assets/arrow-up.svg';
 
-import { FaArrowCircleUp } from 'react-icons/fa';
+import { FiArrowUpCircle } from 'react-icons/fi';
 
 const Header = ({ history, dimensions }) => {
     const [menuState, setMenuState] = useState({ menuOpened: false });
@@ -76,7 +76,7 @@ const Header = ({ history, dimensions }) => {
                     </div>
                 </div>
             </div>
-            <FaArrowCircleUp
+            <FiArrowUpCircle
                 className="scrollTop"
                 onClick={scrollTop}
                 style={{ height: 40, display: !isVisible ? 'flex' : 'none' }} />
