@@ -44,7 +44,7 @@ const Header = ({ history, dimensions }) => {
 
         return () => document.removeEventListener("scroll", handleScroll)
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
+    }, [menuState.menuOpened]);
 
     const scrollTop = () => {
         document.querySelector("body").scrollTo({ top: 0, behavior: 'smooth' });
