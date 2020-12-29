@@ -1,9 +1,9 @@
 .card {
-    height: 45rem;
+    height: 25rem;
     display: flex;
     margin-bottom: 70px;
-    margin-left: 70px;
-    margin-right: 70px;
+    margin-left: 170px;
+    margin-right: 170px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
     transition: 0.3s;
     @include media("<=tablet") {
