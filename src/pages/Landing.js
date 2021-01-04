@@ -17,7 +17,7 @@ const homeAnimation = (completeAnimation) => {
             amount: 0.3
         }
     }).to('.intro-overlay', 1.6, {
-        height: 0,
+        height: 0, 
         ease: 'expo.inOut'
     }).to('.intro-overlay', 0, {
         css: { display: 'none' },
@@ -36,7 +36,7 @@ function Landing() {
         if (window.sessionStorage.getItem("first") === null)
             homeAnimation(completeAnimation);
         window.sessionStorage.setItem("first", 1);
-    }, [])
+    }, []) 
 
     return (
         <div>
