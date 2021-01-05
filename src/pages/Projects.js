@@ -1,11 +1,18 @@
 import React from "react";
+import { motion } from 'framer-motion';
+
 import ProjectCard from "../components/Projects/Card.js";
 
 function Projects() {
     return (
         <div className="page">
             <div className='container'>
-                <div className='projects'>
+                <motion.div 
+                initial={{ scale: 1.1, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                exit={{ scale: 1.1, opacity: 0 }}
+                transition={{ duration: 0.7, ease: [0.43, 0.13, 0.23, 0.96] }}
+                className='projects'>
                     <ProjectCard
                         title="Covid Pro-Tips"
                         description="Responsive, interactive, and professional website fetching and displaying live Covid-19 data along interactive maps and datatables."
@@ -31,7 +38,7 @@ function Projects() {
                             { name: "Repo", link: "https://github.com/Zjjc123/Vitality" },
                         ]}
                     />
-                </div>
+                </motion.div>
             </div>
         </div>
 

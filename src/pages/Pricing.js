@@ -1,9 +1,15 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const Pricing = () => {
     return (
         <div className="page">
-            <div className="container">
+            <motion.div 
+            initial={{ scale: 1.1, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            exit={{ scale: 1.1, opacity: 0 }}
+            transition={{ duration: 0.7, ease: [0.43, 0.13, 0.23, 0.96] }}
+            className="container">
                 <div className="block">
                     <h1>Payment Information</h1>
                     <h3>Venmo: @jasonzhang02</h3>
@@ -41,7 +47,7 @@ const Pricing = () => {
                         <li>Number of pictures vary</li>
                     </ul>
                 </div>
-            </div>
+            </motion.div>
         </div>
     )
 }

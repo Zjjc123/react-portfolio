@@ -1,5 +1,6 @@
 import React from "react";
 import { Route, Switch, useLocation } from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
 
 import Landing from "../pages/Landing.js"
 import Projects from '../pages/Projects.js';
@@ -19,11 +20,13 @@ const PageRouter = () => {
     let location = useLocation()
 
     return (
-        <Switch location={location} key={location.pathname}>
-            {routes.map(({ path, Component }) => (
-                <Route key={path} exact path={path} component={Component} />
-            ))}
-        </Switch>
+        <AnimatePresence exitBeforeEnter>
+            <Switch location={location} key={location.pathname}>
+                {routes.map(({ path, Component }) => (
+                    <Route key={path} exact path={path} component={Component} />
+                ))}
+            </Switch>
+        </AnimatePresence>
     )
 }
 

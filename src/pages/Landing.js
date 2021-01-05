@@ -3,6 +3,8 @@ import { ReactComponent as RightArrow } from '../assets/arrow-right.svg';
 import IntroOverlay from "../components/IntroOverlay";
 import gsap from 'gsap';
 
+import { motion } from 'framer-motion';
+
 import { NavLink } from 'react-router-dom';
 
 const tl = gsap.timeline();
@@ -17,7 +19,7 @@ const homeAnimation = (completeAnimation) => {
             amount: 0.3
         }
     }).to('.intro-overlay', 1.6, {
-        height: 0, 
+        height: 0,
         ease: 'expo.inOut'
     }).to('.intro-overlay', 0, {
         css: { display: 'none' },
@@ -36,12 +38,16 @@ function Landing() {
         if (window.sessionStorage.getItem("first") === null)
             homeAnimation(completeAnimation);
         window.sessionStorage.setItem("first", 1);
-    }, []) 
+    }, [])
 
     return (
         <div>
             {(animationComplete === false && window.sessionStorage.getItem("first") === null) ? <IntroOverlay /> : ""}
-            <section className="main">
+            <motion.section
+            initial={{ scale: 1.1, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            exit={{ scale: 1.1, opacity: 0 }}
+            transition={{ duration: 0.7, ease: [0.43, 0.13, 0.23, 0.96] }} className="main">
                 <div className="container">
                     <div className='row'>
                         <h2>
@@ -60,7 +66,7 @@ function Landing() {
                 <video className="background-video" loop autoPlay muted>
                     <source src={process.env.PUBLIC_URL + "/videos/landing.mp4"} type="video/mp4" />
                 </video>
-            </section>
+            </motion.section>
         </div>
     )
 }
