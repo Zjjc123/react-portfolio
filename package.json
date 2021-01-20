@@ -11,7 +11,7 @@
     "css-tree": "^1.0.0-alpha.39",
     "drei": "^1.5.7",
     "framer-motion": "^2.3.0",
-    "gsap": "^3.4.2",
+    "gsap": "^3.6.0",
     "lerp": "^1.0.3",
     "node-sass": "^4.14.1",
     "pace": "0.0.4",
