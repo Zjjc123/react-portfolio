@@ -7,13 +7,15 @@ import Projects from '../pages/Projects.js';
 import About from '../pages/About.js';
 import Gallery from '../pages/Gallery.js';
 import Pricing from '../pages/Pricing.js';
+import CodeBytes from "../pages/CodeBytes.js";
 
 const routes = [
+    { path: '/projects', name: 'Projects', Component: Projects },
+    { path: '/about', name: 'About', Component: About },
+    { path: '/gallery', name: 'Gallery', Component: Gallery },
+    { path: '/pricing', name: 'Pricing', Component: Pricing },
+    { path: '/code-bytes', name: 'Code Bytes', Component: CodeBytes },
     { path: '/', name: 'Landing', Component: Landing },
-    { path: '/Projects', name: 'Projects', Component: Projects },
-    { path: '/About', name: 'About', Component: About },
-    { path: '/Gallery', name: 'Gallery', Component: Gallery },
-    { path: '/Pricing', name: 'Pricing', Component: Pricing }
 ]
 
 const PageRouter = () => {
@@ -23,7 +25,7 @@ const PageRouter = () => {
         <AnimatePresence exitBeforeEnter>
             <Switch location={location} key={location.pathname}>
                 {routes.map(({ path, Component }) => (
-                    <Route key={path} exact path={path} component={Component} />
+                    <Route key={path} path={path} component={Component} />
                 ))}
             </Switch>
         </AnimatePresence>

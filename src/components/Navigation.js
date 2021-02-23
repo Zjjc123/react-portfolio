@@ -24,6 +24,11 @@ const Navigation = () => {
                             </NavLink>
                             </li>
                             <li>
+                                <NavLink to="/code-bytes" exact>
+                                    Code Bytes
+                            </NavLink>
+                            </li>
+                            <li>
                                 <NavLink to="/about" exact>
                                     About
                             </NavLink>
