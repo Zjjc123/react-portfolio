@@ -8,7 +8,7 @@ function Test() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}>
-                <h1>Test</h1>
+                <h1 className="text-5xl">Test</h1>
 
             </motion.div>
         </div>
