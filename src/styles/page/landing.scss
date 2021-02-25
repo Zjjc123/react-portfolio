@@ -41,6 +41,7 @@
             width: 256px;
             position: relative;
             z-index: 2;
+            margin-top: 32px;
             a {
                 font-size: 1.6rem;
                 color: $black;
@@ -57,6 +58,7 @@
                     padding-bottom: 250px;
                 }
                 svg {
+                    box-sizing: content-box !important;
                     margin-left: 16px;
                     border: 2px solid $black;
                     padding: 12px;
