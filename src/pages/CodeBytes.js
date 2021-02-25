@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from 'framer-motion'
-import { useRouteMatch, Link, Switch, Route } from "react-router-dom";
+import { useRouteMatch, Switch, Route } from "react-router-dom";
 import InvestingTrauma from "./CodeBytes/InvestingTrauma";
 
 function CodeBytes() {
