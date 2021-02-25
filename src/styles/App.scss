@@ -23,6 +23,7 @@ html {
   overflow: hidden;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 body::-webkit-scrollbar {
