@@ -17,8 +17,7 @@ function CodeBytes() {
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
                                 exit={{ opacity: 0 }}>
-                                <h1 className="text-5xl self-center text-center">Code Bytes</h1>
-                                <Link to={`${match.url}/investing-trauma`}>Investing Trauma Simulator</Link>
+                                <h1 className="text-5xl self-center align-middle text-center">Under Construction</h1>
                             </motion.div>
                         </div>
                     </div>
