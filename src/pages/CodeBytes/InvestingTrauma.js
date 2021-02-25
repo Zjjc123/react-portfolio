@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion'
 
-function Test() {
+function InvestingTrauma() {
     return (<div className="page">
         <div className='container'>
             <motion.div
@@ -15,4 +15,4 @@ function Test() {
     </div>)
 }
 
-export default Test;
+export default InvestingTrauma;
