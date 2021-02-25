@@ -8,14 +8,16 @@ import About from '../pages/About.js';
 import Gallery from '../pages/Gallery.js';
 import Pricing from '../pages/Pricing.js';
 import CodeBytes from "../pages/CodeBytes.js";
+import Page404 from "./404.js";
 
 const routes = [
-    { path: '/projects', name: 'Projects', Component: Projects },
-    { path: '/about', name: 'About', Component: About },
-    { path: '/gallery', name: 'Gallery', Component: Gallery },
-    { path: '/pricing', name: 'Pricing', Component: Pricing },
-    { path: '/code-bytes', name: 'Code Bytes', Component: CodeBytes },
-    { path: '/', name: 'Landing', Component: Landing },
+    { path: '/projects', name: 'Projects', Component: Projects, exact: true },
+    { path: '/about', name: 'About', Component: About, exact: true },
+    { path: '/gallery', name: 'Gallery', Component: Gallery, exact: true },
+    { path: '/pricing', name: 'Pricing', Component: Pricing, exact: true },
+    { path: '/code-bytes', name: 'Code Bytes', Component: CodeBytes, exact: false },
+    { path: '/', name: 'Landing', Component: Landing, exact: true },
+    { path: '/', name: '404', Component: Page404, exact: false },
 ]
 
 const PageRouter = () => {
@@ -24,8 +26,8 @@ const PageRouter = () => {
     return (
         <AnimatePresence exitBeforeEnter>
             <Switch location={location} key={location.pathname}>
-                {routes.map(({ path, Component }) => (
-                    <Route key={path} path={path} component={Component} />
+                {routes.map(({ path, Component, exact }) => (
+                    <Route key={path} path={path} component={Component} exact={exact} />
                 ))}
             </Switch>
         </AnimatePresence>
