@@ -30,9 +30,9 @@ function InvestingTrauma() {
                 random_price = Math.random() * (max_big - min_big)
             }
             if (!hasBought) {
-                setStonkPrice(Math.max(10, stonkPrice + min * (random_price)))
+                setStonkPrice(Math.max(10, stonkPrice + (random_price)))
             } else {
-                setStonkPrice(Math.max(10, stonkPrice - min * (random_price)))
+                setStonkPrice(Math.max(10, stonkPrice - (Math.abs(random_price))))
             }
             let new_stonks = stonks.concat(stonkPrice)
             if (new_stonks.length > 100) {
@@ -52,7 +52,11 @@ function InvestingTrauma() {
 
         let stonk_lines = ""
         for (var i = 0; i < stonks.length; i++) {
-            stonk_lines = stonk_lines + (`${i / (stonks.length) * width}, ${height - (Math.floor((stonks[i] - min) / (max - min) * height))} `)
+            if (max-min < 5) {
+                stonk_lines = stonk_lines + (`${Math.floor(i / (stonks.length) * width)}, ${height} `)
+            } else {
+                stonk_lines = stonk_lines + (`${Math.floor(i / (stonks.length) * width)}, ${height - (Math.floor((stonks[i] - min) / (max - min) * height))} `)
+            }
         }
         setStonkLines(stonk_lines)
     }
