@@ -7534,6 +7534,11 @@
   "resolved" "https://registry.npmjs.org/klona/-/klona-2.0.4.tgz"
   "version" "2.0.4"
 
+"konva@^7.2.4", "konva@>=7":
+  "integrity" "sha512-i6ShSipM4o3HC3yjuTNHSa18rml7XXJowg942BrCmyyyylg1CefiwN7sZE+0ax8icRfiBSUPjRqzDeNN3aLnoQ=="
+  "resolved" "https://registry.npmjs.org/konva/-/konva-7.2.4.tgz"
+  "version" "7.2.4"
+
 "language-subtag-registry@~0.3.2":
   "integrity" "sha512-L0IqwlIXjilBVVYKFT37X9Ih11Um5NEl9cbJIuU/SwP/zEEAbBPOnEeeuxVMf45ydWQRDQN3Nqc96OgbH1K+Pg=="
   "resolved" "https://registry.npmjs.org/language-subtag-registry/-/language-subtag-registry-0.3.21.tgz"
@@ -10078,15 +10083,14 @@
   dependencies:
     "ua-parser-js" "^0.7.21"
 
-"react-dom@^16.13.1":
-  "integrity" "sha512-81PIMmVLnCNLO/fFOQxdQkvEq/+Hfpv24XNJfpyZhTRfO0QcmQIF/PgCa1zCOj2w1hrn12MFLyaJ/G0+Mxtfag=="
-  "resolved" "https://registry.npmjs.org/react-dom/-/react-dom-16.13.1.tgz"
-  "version" "16.13.1"
+"react-dom@^17.0.1", "react-dom@>=17.0.1":
+  "integrity" "sha512-6eV150oJZ9U2t9svnsspTMrWNyHc6chX0KzDeAOXftRa8bNeOKTTfCJ7KorIwenkHd2xqVTBTCZd79yk/lx/Ug=="
+  "resolved" "https://registry.npmjs.org/react-dom/-/react-dom-17.0.1.tgz"
+  "version" "17.0.1"
   dependencies:
     "loose-envify" "^1.1.0"
     "object-assign" "^4.1.1"
-    "prop-types" "^15.6.2"
-    "scheduler" "^0.19.1"
+    "scheduler" "^0.20.1"
 
 "react-error-overlay@^6.0.9":
   "integrity" "sha512-nQTTcUu+ATDbrSD1BZHr5kgSD4oF8OFjxun8uAaL8RwPBacGBNPf/yAuVVdx17N8XNzRDMrZ9XcKZHCjPW+9ew=="
@@ -10115,6 +10119,14 @@
   "resolved" "https://registry.npmjs.org/react-is/-/react-is-17.0.1.tgz"
   "version" "17.0.1"
 
+"react-konva@^17.0.1-3":
+  "integrity" "sha512-vbbVyf+IcapVOYu+6w3Wc8BMilQ5zq1P2YaUMSkr4OwcWHvK2hxpJCMldi+wOSOZWoWJBXchWfFvmQHcO55KPA=="
+  "resolved" "https://registry.npmjs.org/react-konva/-/react-konva-17.0.1-3.tgz"
+  "version" "17.0.1-3"
+  dependencies:
+    "react-reconciler" "~0.26.1"
+    "scheduler" "^0.20.1"
+
 "react-layout-effect@^1.0.1":
   "integrity" "sha512-zdRXHuch+OBHU6bvjTelOGUCM+UDr/iCY+c0wXLEAc+G4/FlcJruD/hUOzlKH5XgO90Y/BUJPNhI/g9kl+VAsA=="
   "resolved" "https://registry.npmjs.org/react-layout-effect/-/react-layout-effect-1.0.5.tgz"
@@ -10139,6 +10151,15 @@
   "integrity" "sha512-alTKsjEL0dKH/ru1Iyn7vliS2QRcBp9zZPGoWxUOvRGWPUYgjo+V01is7p04It6KhgrzhJGnIj9GgX8W4bZoCQ=="
   "resolved" "https://registry.npmjs.org/react-merge-refs/-/react-merge-refs-1.1.0.tgz"
   "version" "1.1.0"
+
+"react-reconciler@~0.26.1":
+  "integrity" "sha512-6E/CvH9zcDmHjhiNJlP0qJ8+3ufnY2b5RWs774Uy8XKWN0l6qfnlkz0XnDacxqj2rbJdq76w9dlFXjPPOQrmqA=="
+  "resolved" "https://registry.npmjs.org/react-reconciler/-/react-reconciler-0.26.1.tgz"
+  "version" "0.26.1"
+  dependencies:
+    "loose-envify" "^1.1.0"
+    "object-assign" "^4.1.1"
+    "scheduler" "^0.20.1"
 
 "react-reconciler@0.25.1":
   "integrity" "sha512-R5UwsIvRcSs3w8n9k3tBoTtUHdVhu9u84EG7E5M0Jk9F5i6DA1pQzPfUZd6opYWGy56MJOtV3VADzy6DRwYDjw=="
@@ -10286,14 +10307,13 @@
   dependencies:
     "debounce" "^1.2.0"
 
-"react@^16.13.1", "react@>= 16":
-  "integrity" "sha512-YMZQQq32xHLX0bz5Mnibv1/LHb3Sqzngu7xstSM+vrkE5Kzr9xE0yMByK5kMoTK30YVJE61WfbxIFFvfeDKT1w=="
-  "resolved" "https://registry.npmjs.org/react/-/react-16.13.1.tgz"
-  "version" "16.13.1"
+"react@^17.0.1", "react@>= 16", "react@>=17.0.1", "react@17.0.1":
+  "integrity" "sha512-lG9c9UuMHdcAexXtigOZLX8exLWkW0Ku29qPRU8uhF2R9BN96dLCt0psvzPLlHc5OWkgymP3qwTRgbnw5BKx3w=="
+  "resolved" "https://registry.npmjs.org/react/-/react-17.0.1.tgz"
+  "version" "17.0.1"
   dependencies:
     "loose-envify" "^1.1.0"
     "object-assign" "^4.1.1"
-    "prop-types" "^15.6.2"
 
 "read-pkg-up@^1.0.1":
   "integrity" "sha1-nWPBMnbAZZGNV/ACpX9AobZD+wI="
@@ -10994,6 +11014,14 @@
   "integrity" "sha512-n/zwRWRYSUj0/3g/otKDRPMh6qv2SYMWNq85IEa8iZyAv8od9zDYpGSnpBEjNgcMNq6Scbu5KfIPxNF72R/2EA=="
   "resolved" "https://registry.npmjs.org/scheduler/-/scheduler-0.19.1.tgz"
   "version" "0.19.1"
+  dependencies:
+    "loose-envify" "^1.1.0"
+    "object-assign" "^4.1.1"
+
+"scheduler@^0.20.1":
+  "integrity" "sha512-LKTe+2xNJBNxu/QhHvDR14wUXHRQbVY5ZOYpOGWRzhydZUqrLb2JBvLPY7cAqFmqrWuDED0Mjk7013SZiOz6Bw=="
+  "resolved" "https://registry.npmjs.org/scheduler/-/scheduler-0.20.1.tgz"
+  "version" "0.20.1"
   dependencies:
     "loose-envify" "^1.1.0"
     "object-assign" "^4.1.1"

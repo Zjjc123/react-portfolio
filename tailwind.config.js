@@ -2,10 +2,16 @@ module.exports = {
   purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        ticker: ["'LCD Solid'"]
+      },
+    },
   },
   variants: {
-    extend: {},
+    extend: {
+      backgroundColor: ['active'],
+    },
   },
   plugins: [],
 }

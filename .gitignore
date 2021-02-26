@@ -25,3 +25,5 @@ yarn-error.log*
 invision/
 
 media/
+
+src/styles/tailwind.out.css
