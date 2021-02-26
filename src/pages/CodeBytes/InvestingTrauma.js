@@ -91,11 +91,11 @@ function InvestingTrauma() {
                         point
                     />
                 </svg>
-                <button className="absolute mx-16 mb-48 right-0 bottom-0 h-16 w-32 bg-blue-500 hover:bg-blue-400 active:bg-blue-500 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded focus:outline-none" onClick={Bought}>BUY 💎</button>
-                <button className="absolute mx-16 mb-16 right-0 bottom-0 h-16 w-32 bg-red-500 hover:bg-red-400 active:bg-red-500 text-white font-bold py-2 px-4 border-b-4 border-red-700 hover:border-red-500 rounded focus:outline-none" onClick={Sold}>SELL ALL 🧻</button>
-                <h1 className="absolute font-ticker mx-16 my-16 left-0 top-0 text-xl text-white">{"Stonk Price: $" + (stonkPrice).toFixed(2)}</h1>
-                <h1 className="absolute font-ticker mx-16 my-24 left-0 top-0 text-xl text-white">{"Portfolio: $" + (portfolio + numStonk * stonkPrice).toFixed(2) + " ($:" + ((portfolio + numStonk * stonkPrice) - 10000).toFixed(2) + ")" }</h1>
-                <h1 className="absolute font-ticker mx-16 my-36 left-0 top-0 text-xl text-white">{"Number of Stonks: " + numStonk}</h1>
+                <button className="absolute mx-16 mb-64 right-0 bottom-0 h-16 w-64 h-32 bg-blue-500 hover:bg-blue-400 active:bg-blue-500 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded focus:outline-none text-5xl" onClick={Bought}>BUY 💎</button>
+                <button className="absolute mx-16 mb-16 right-0 bottom-0 h-16 w-64 h-32 bg-red-500 hover:bg-red-400 active:bg-red-500 text-white font-bold py-2 px-4 border-b-4 border-red-700 hover:border-red-500 rounded focus:outline-none text-4xl" onClick={Sold}>SELL ALL 🧻</button>
+                <h1 className="absolute font-ticker mx-16 my-16 left-0 top-0 text-3xl text-white">{"Stonk Price: $" + (stonkPrice).toFixed(2)}</h1>
+                <h1 className="absolute font-ticker mx-16 my-24 left-0 top-0 text-3xl text-white">{"Portfolio: $" + (portfolio + numStonk * stonkPrice).toFixed(2) + " ($:" + ((portfolio + numStonk * stonkPrice) - 10000).toFixed(2) + ")" }</h1>
+                <h1 className="absolute font-ticker mx-16 my-36 left-0 top-0 text-3xl text-white">{"Number of Stonks: " + numStonk}</h1>
             </motion.div>
         </div>)
 }
