@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function PoemCards(props) {
     return (
-        <div className="max-w-2xl mx-auto sm:px-6 lg:px-8">
+        <div className="max-w-2xl mx-auto px-8">
             <div className="overflow-hidden shadow-md">
                 <div className="px-6 py-4 bg-white border-b border-gray-200 font-bold uppercase">
                     {props.title}
