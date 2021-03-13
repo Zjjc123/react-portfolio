@@ -24,11 +24,6 @@ const Navigation = () => {
                             </NavLink>
                             </li>
                             <li>
-                                <NavLink to="/code-bytes" exact>
-                                    Code Bytes
-                            </NavLink>
-                            </li>
-                            <li>
                                 <NavLink to="/about" exact>
                                     About
                             </NavLink>
@@ -50,6 +45,7 @@ const Navigation = () => {
                                     </NavLink>
                                 </li>
                             </ul>
+
                             <ul className="nav-info">
                                 <li className="nav-info-label">Links</li>
                                 <li>
@@ -66,6 +62,20 @@ const Navigation = () => {
                                     <a href="https://www.linkedin.com/in/zjjc123/">
                                         LinkedIn
                             </a>
+                                </li>
+                            </ul>
+                            
+                            <ul className="nav-info">
+                                <li className="nav-info-label">Others</li>
+                                <li>
+                                    <NavLink to="/code-bytes" exact>
+                                        Code Bytes
+                                    </NavLink>
+                                </li>
+                                <li>
+                                    <NavLink to="/poems" exact>
+                                        Poems
+                                    </NavLink>
                                 </li>
                             </ul>
                             <ul className="nav-info">

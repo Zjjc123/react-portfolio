@@ -8,6 +8,7 @@ import About from '../pages/About.js';
 import Gallery from '../pages/Gallery.js';
 import Pricing from '../pages/Pricing.js';
 import CodeBytes from "../pages/CodeBytes.js";
+import Poems from "../pages/Poems.js";
 import Page404 from "./404.js";
 
 const routes = [
@@ -16,6 +17,7 @@ const routes = [
     { path: '/gallery', name: 'Gallery', Component: Gallery, exact: true },
     { path: '/pricing', name: 'Pricing', Component: Pricing, exact: true },
     { path: '/code-bytes', name: 'Code Bytes', Component: CodeBytes, exact: false },
+    { path: '/poems', name: 'Poems', Component: Poems, exact: true },
     { path: '/', name: 'Landing', Component: Landing, exact: true },
     { path: '/', name: '404', Component: Page404, exact: false },
 ]
