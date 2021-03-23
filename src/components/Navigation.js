@@ -35,7 +35,7 @@ const Navigation = () => {
                             <ul className="nav-info">
                                 <li className="nav-info-label">Contact</li>
                                 <li>
-                                    <a href="mailto:zjjc123@hotmail.com">
+                                    <a href="mailto:me@jasonzhang.dev">
                                         Get in touch
                                     </a>
                                 </li>
