@@ -6,7 +6,7 @@ function Gallery() {
     <div className="page">
       <ImageGrid />
     </div>
-  )
+  );
 }
 
 export default Gallery;
