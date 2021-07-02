@@ -19,8 +19,8 @@ const Navigation = () => {
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/gallery" exact>
-                  Gallery
+                <NavLink to="/portfolio" exact>
+                  Portfolio
                 </NavLink>
               </li>
               <li>
@@ -63,6 +63,11 @@ const Navigation = () => {
 
               <ul className="nav-info">
                 <li className="nav-info-label">Others</li>
+                <li>
+                  <NavLink to="/gallery" exact>
+                    Gallery
+                  </NavLink>
+                </li>
                 <li>
                   <NavLink to="/code-bytes" exact>
                     Code Bytes

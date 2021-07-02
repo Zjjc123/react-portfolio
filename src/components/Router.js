@@ -6,6 +6,7 @@ import Landing from "../pages/Landing.js";
 import Projects from "../pages/Projects.js";
 import About from "../pages/About.js";
 import Gallery from "../pages/Gallery.js";
+import Portfolio from "../pages/Portfolio.js";
 import Pricing from "../pages/Pricing.js";
 import CodeBytes from "../pages/CodeBytes.js";
 import Poems from "../pages/Poems.js";
@@ -16,10 +17,10 @@ const routes = [
   { path: "/about", name: "About", Component: About, exact: true },
   { path: "/gallery", name: "Gallery", Component: Gallery, exact: true },
   {
-    path: "/code-bytes",
-    name: "Code Bytes",
-    Component: CodeBytes,
-    exact: false,
+    path: "/portfolio",
+    name: "Portfolio",
+    Component: Portfolio,
+    exact: true,
   },
   { path: "/pricing", name: "Pricing", Component: Pricing, exact: true },
   {
