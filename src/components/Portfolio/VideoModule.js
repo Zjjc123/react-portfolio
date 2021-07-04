@@ -2,7 +2,7 @@ import React from "react";
 
 export default function VideoModule(props) {
   return (
-    <div className="mx-20 lg:mx-64 pb-24">
+    <div className="mx-20 lg:mx-64 lg:pb-24 pb-8">
       <h1 className="md:text-3xl mb-4 text-center  font-sans font-ultralight">
         {props.title}
       </h1>
