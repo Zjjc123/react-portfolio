@@ -12,6 +12,7 @@ import CodeBytes from "../pages/CodeBytes.js";
 import Poems from "../pages/Poems.js";
 import Page404 from "./404.js";
 import Yearbook from "../pages/Yearbook.js";
+import YearbookSigned from "../pages/YearbookSigned.js";
 
 const routes = [
   { path: "/projects", name: "Projects", Component: Projects, exact: true },
@@ -32,6 +33,12 @@ const routes = [
   },
   { path: "/poems", name: "Poems", Component: Poems, exact: true },
   { path: "/yearbook", name: "Yearbook", Component: Yearbook, exact: true },
+  {
+    path: "/yearbook-signed",
+    name: "Yearbook Signed",
+    Component: YearbookSigned,
+    exact: true,
+  },
   { path: "/", name: "Landing", Component: Landing, exact: true },
   { path: "/", name: "404", Component: Page404, exact: false },
 ];
