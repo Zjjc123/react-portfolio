@@ -17,12 +17,6 @@ const Pricing = () => {
           <h3>Paypal: zjjc123@hotmail.com</h3>
         </div>
         <div className="block">
-          <h1>COVID-19 Precautions</h1>
-          <h3>Social distance at ALL times (6ft+)</h3>
-          <h3>Masks on at ALL times (except when picture is being taken)</h3>
-          <h3>Do NOT ask to look at pictures on my camera</h3>
-        </div>
-        <div className="block">
           <h1>Pricing</h1>
           <h2>Base Package ($50)</h2>
           <ul>
