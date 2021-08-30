@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { db } from "../firebase/firebase";
 import { collection, addDoc } from "firebase/firestore";
 import emailjs from "emailjs-com";
+import { NavLink } from "react-router-dom";
 
 function Yearbook() {
   const [name, setName] = useState("");
@@ -90,6 +91,14 @@ function Yearbook() {
             >
               Send
             </button>
+          </div>
+          <div className="pt-4">
+            <NavLink
+              className="text-blue-400 hover:text-blue-200"
+              to="/yearbook-signed"
+            >
+              View Signed
+            </NavLink>
           </div>
         </form>
       </div>

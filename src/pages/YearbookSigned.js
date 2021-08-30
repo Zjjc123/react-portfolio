@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { db } from "../firebase/firebase";
 import { collection, getDocs } from "firebase/firestore";
 
-import PoemCard from "../components/PoemCards";
+import PoemCard from "../components/TextCard";
 
 function YearbookSigned() {
   const [signs, setSigns] = useState([]);
@@ -31,9 +31,11 @@ function YearbookSigned() {
       exit={{ opacity: 0 }}
     >
       <div className="container">
-        {signs.map((sign) => (
-          <PoemCard title={sign.name} text={sign.message} />
-        ))}
+        <div className="flex flex-wrap">
+          {signs.map((sign) => (
+            <PoemCard title={sign.name} text={sign.message} />
+          ))}
+        </div>
       </div>
     </motion.div>
   );

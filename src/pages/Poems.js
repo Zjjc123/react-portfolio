@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-import PoemCards from "../components/PoemCards";
+import TextCard from "../components/TextCard";
 
 function Poems() {
   return (
@@ -14,7 +14,7 @@ function Poems() {
           transition={{ duration: 1, ease: [0.43, 0.13, 0.23, 0.96] }}
           className="space-y-10"
         >
-          <PoemCards
+          <TextCard
             title="Motivation"
             text={`Countless desires.\nDown goes the sun and up comes the night,\n  smothering the fires\nwithin me. Ambition fades, another day, another fight.`}
           />
