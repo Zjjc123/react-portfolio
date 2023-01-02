@@ -7,7 +7,6 @@ import { AiOutlineClose, AiOutlineMail, AiOutlineMenu } from 'react-icons/ai';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
 
-
 export default function NavBar() {
     const [nav, setNav] = useState(false);
     const [shadow, setShadow] = useState(false);
