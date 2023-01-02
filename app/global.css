@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply bg-[#12151a] text-white tracking-wide
+    @apply bg-[#0c0f13] text-white tracking-wide
   }
   h1, h2, h3, h4, h5, h6 {
     @apply font-bold
@@ -23,6 +23,6 @@
   }
 
   button {
-    @apply shadow-xl 
+    @apply shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-r from-[#5651e5] to-[#709dff]
   }
 }
