@@ -7,15 +7,44 @@ import Link from 'next/link';
 import { RoughNotation, RoughNotationGroup } from 'react-rough-notation';
 
 const About = () => {
+  // state where this component is scrolled into view
+  const [isInView, setIsInView] = React.useState(false);
+
+  // reference the component
+  const aboutRef = React.useRef(null);
+
+  // update that state
+  React.useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        // only change state if the first time the component is scrolled into view
+        if (entry.isIntersecting) setIsInView(true);
+      },
+      {
+        threshold: 0.5,
+      }
+    );
+
+    if (aboutRef.current) observer.observe(aboutRef.current);
+
+    return () => {
+      if (aboutRef.current) observer.unobserve(aboutRef.current);
+    };
+  }, []);
+
   return (
-    <div id="about" className="w-full md:h-screen p-2 flex items-center py-16">
+    <div
+      id="about"
+      ref={aboutRef}
+      className="w-full md:h-screen p-2 flex items-center py-16"
+    >
       <div className="max-w-screen-lg mx-auto md:grid grid-cols-3 gap-8">
         <div className="col-span-2">
           <p className="uppercase text-xl tracking-widest text-[#67eef3]">
             About
           </p>
           <h2 className="py-4">Who I Am</h2>
-          <RoughNotationGroup show={true}>
+          <RoughNotationGroup show={isInView}>
             <p className="py-2 text-gray-100">
               As a computer science student at the University of Washington, I
               am passionate about using technology, specifically{' '}
@@ -53,8 +82,8 @@ const About = () => {
             </p>
 
             <p className="py-2">
-              Currently looking for internship opportunities! {" "}
-              <RoughNotation type="circle">Contact me.</RoughNotation>
+              Currently looking for internship opportunities!{' '}
+              <RoughNotation type="circle"><a href="/#contact">Contact me.</a></RoughNotation>
             </p>
             <Link href="/#projects">
               <p className="py-2 text-gray-100 underline cursor-pointer">
