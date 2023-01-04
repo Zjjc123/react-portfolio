@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import Link from 'next/link';
 import React, { useState } from 'react';
@@ -33,9 +33,7 @@ export default function NavBar() {
               <a href="/#about">About</a>
             </li>
             <li className="ml-10 text-sm uppercase font-semibold hover:text-gray-200">
-              <Link href="/#projects" scroll={false}>
-                Projects
-              </Link>
+              <a href="/#projects">Projects</a>
             </li>
             <li className="ml-10 text-sm uppercase font-semibold hover:text-gray-200">
               <Link href="/resume" scroll={false}>
@@ -43,9 +41,7 @@ export default function NavBar() {
               </Link>
             </li>
             <li className="ml-10 text-sm uppercase font-semibold hover:text-gray-200">
-              <Link href="/#contact" scroll={false}>
-                Contact
-              </Link>
+              <a href="/#contact">Contact</a>
             </li>
           </ul>
           {/* Hamburger Icon */}

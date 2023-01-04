@@ -47,11 +47,8 @@ const About = () => {
           <RoughNotationGroup show={isInView}>
             <p className="py-2 text-gray-100">
               As a computer science student at the University of Washington, I
-              am passionate about using technology, specifically{' '}
-              <RoughNotation type="highlight" color="#c0c039">
-                artificial intelligence
-              </RoughNotation>{' '}
-              and{' '}
+              am passionate about using technology, specifically artificial
+              intelligence and{' '}
               <RoughNotation type="highlight" color="#9e00c9">
                 machine learning
               </RoughNotation>
@@ -60,21 +57,28 @@ const About = () => {
               foundation in programming, software development, and machine
               learning through my coursework and internship experiences,
               including developing mobile apps and websites using cutting-edge
-              frameworks and libraries and using NLP to contextualize large
-              datasets.
+              frameworks and libraries and using{' '}
+              <RoughNotation type="highlight" color="#c0c039">
+                NLP
+              </RoughNotation>{' '}
+              to contextualize large datasets.
             </p>
             <p className="py-2 text-gray-100">
               I am proficient in languages such as C/C++, C#, Java/Kotlin,
               JavaScript/TypeScript, Python, and Rust, and have experience with
               web development libraries/frameworks like{' '}
               <RoughNotation type="highlight" color="#00a5c9">
-                React.js
+                React.js,{' '}
               </RoughNotation>
-              , Next.js,{' '}
+              Next.js,{' '}
               <RoughNotation type="highlight" color="#00c954">
                 Tailwindcss
               </RoughNotation>
-              , and Node.JS. I am excited to continue learning and using my
+              , and Node.JS and ML libraries like{' '}
+              <RoughNotation type="highlight" color="#a84707">
+                PyTorch
+              </RoughNotation>
+              , spaCy, and flair. I am excited to continue learning and using my
               skills to make a positive impact through my work as a developer.
             </p>
             <p className="py-2 italic text-gray-400">
@@ -83,7 +87,9 @@ const About = () => {
 
             <p className="py-2">
               Currently looking for internship opportunities!{' '}
-              <RoughNotation type="circle"><a href="/#contact">Contact me.</a></RoughNotation>
+              <RoughNotation type="circle">
+                <a href="/#contact">Contact me.</a>
+              </RoughNotation>
             </p>
             <Link href="/#projects">
               <p className="py-2 text-gray-100 underline cursor-pointer">
@@ -94,7 +100,7 @@ const About = () => {
         </div>
         <div className="w-[300px] h-auto m-auto shadow-lg shadow-gray-200 rounded-xl flex items-center px-0 justify-center hover:scale-[1.02] ease-in duration-300">
           <Image
-            src="/logo.jpg"
+            src="/me.jpg"
             width={300}
             height={300}
             className="rounded-xl"
