@@ -1,5 +1,6 @@
 import { GraphQLClient, gql } from 'graphql-request';
 import moment from 'moment';
+import { ReactMarkdown } from 'react-markdown/lib/react-markdown';
 import {
   AchievementBadge,
   BookBadge,
@@ -17,7 +18,7 @@ export interface Post {
   reading: string;
   readingPercentage: number;
   content: {
-    html: string;
+    markdown: string;
   };
 }
 
@@ -37,7 +38,7 @@ const QUERY = gql`
       reading
       readingPercentage
       content {
-        html
+        markdown
       }
     }
   }
@@ -100,9 +101,9 @@ export default async function Page() {
                   <></>
                 )}
               </p>
-              <div className='mt-6'
-                dangerouslySetInnerHTML={{ __html: post.content.html }}
-              ></div>
+              <div className="mt-6">
+                <ReactMarkdown>{post.content.markdown}</ReactMarkdown>
+              </div>
             </div>
           </div>
         );

@@ -23,10 +23,6 @@ html {
     @apply text-2xl sm:text-4xl md:text-5xl
   }
 
-  li {
-    @apply cursor-pointer
-  }
-
   button {
     @apply rounded-xl uppercase bg-gradient-to-r from-[#0c409a] to-[#00c1bd]
   }

@@ -26,21 +26,21 @@ export default function NavBar() {
         <div>
           <ul className="hidden md:flex">
             {/* TODO: Next.js Link is broken rn for section scrolling. Swap to link when fixed*/}
-            <li className="ml-10 text-sm uppercase font-semibold hover:text-gray-200">
+            <li className="ml-10 text-sm uppercase font-semibold hover:text-gray-200 cursor-pointer">
               <a href="/#">Home</a>
             </li>
-            <li className="ml-10 text-sm uppercase font-semibold hover:text-gray-200">
+            <li className="ml-10 text-sm uppercase font-semibold hover:text-gray-200 cursor-pointer">
               <a href="/#about">About</a>
             </li>
-            <li className="ml-10 text-sm uppercase font-semibold hover:text-gray-200">
+            <li className="ml-10 text-sm uppercase font-semibold hover:text-gray-200 cursor-pointer">
               <a href="/#projects">Projects</a>
             </li>
-            <li className="ml-10 text-sm uppercase font-semibold hover:text-gray-200">
+            <li className="ml-10 text-sm uppercase font-semibold hover:text-gray-200 cursor-pointer">
               <Link href="/resume" scroll={false}>
                 Resume
               </Link>
             </li>
-            <li className="ml-10 text-sm uppercase font-semibold hover:text-gray-200">
+            <li className="ml-10 text-sm uppercase font-semibold hover:text-gray-200 cursor-pointer">
               <a href="/#contact">Contact</a>
             </li>
           </ul>
