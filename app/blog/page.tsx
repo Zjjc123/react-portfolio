@@ -55,7 +55,8 @@ export default async function Page() {
   return (
     <>
       <h1 className="mx-auto text-center pt-20 md:max-w-screen-lg">Blog</h1>
-      {post.map((post: Post) => {
+      {/* reverse map to show latest post first */}
+      {post.reverse().map((post: Post) => {
         return (
           <div key={post.slug} className="container mx-auto pt-20">
             <div className="w-full px-4 md:px-6 text-xl text-gray-800 leading-normal">
