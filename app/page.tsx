@@ -6,12 +6,12 @@ import Projects from '../components/Project'
 
 export default function Home() {
   return (
-    <>
+    <div className='bg-[#0c0f13] text-white tracking-wide'>
       <NavBar />
       <Main />
       <About />
       <Projects />
       <Contact />
-    </>
+    </div>
   )
 }

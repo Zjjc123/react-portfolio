@@ -7,9 +7,10 @@ html {
 }
 
 @layer base {
-  body {
+  /* body {
     @apply bg-[#0c0f13] text-white tracking-wide
-  }
+  } */
+  
   h1, h2, h3, h4, h5, h6 {
     @apply font-bold
   }
