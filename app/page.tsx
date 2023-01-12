@@ -1,3 +1,5 @@
+export const revalidate = 60;
+
 import About from '../components/About'
 import Contact from '../components/Contact'
 import Main from '../components/Main'

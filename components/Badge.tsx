@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import React, {useState, useEffect} from 'react';
 import { FaTrophy } from 'react-icons/fa';
@@ -58,8 +58,7 @@ export const WatchBadge = ({ text }: Props) => {
   return (
     <div
       className={
-        'inline-block justify-center text-sm font-medium mr-2 px-2.5 py-0.5 rounded ' +
-        color
+       `inline-block justify-center text-sm font-medium mr-2 px-2.5 py-0.5 rounded ${color}`
       }
     >
       {text.replaceAll('_', ' ')}
@@ -78,8 +77,7 @@ export const AchievementBadge = ({ text }: Props) => {
   return (
     <div
       className={
-        'inline-block justify-center text-sm font-medium mr-2 px-2.5 py-0.5 rounded ' +
-        color
+        `inline-block justify-center text-sm font-medium mr-2 px-2.5 py-0.5 rounded ${color}`
       }
     >
       <div className="flex flex-row items-center">
@@ -101,8 +99,7 @@ export const InterestBadge = ({ text }: Props) => {
   return (
     <div
       className={
-        'inline-block justify-center text-sm font-medium mr-2 px-2.5 py-0.5 rounded ' +
-        color
+        `inline-block justify-center text-sm font-medium mr-2 px-2.5 py-0.5 rounded ${color}`
       }
     >
       <div>{text.replaceAll('_', ' ')}</div>
@@ -126,8 +123,7 @@ export const BookBadge = ({ title, percent }: BookProps) => {
   return (
     <div
       className={
-        'inline-block justify-center text-sm font-medium mr-2 px-2.5 py-0.5 rounded ' +
-        color
+         `inline-block justify-center text-sm font-medium mr-2 px-2.5 py-0.5 rounded ${color}`
       }
     >
       <div className="flex flex-row items-center">
