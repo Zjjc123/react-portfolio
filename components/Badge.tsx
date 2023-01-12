@@ -1,5 +1,7 @@
-import React from 'react';
-import { FaTrophy, FaTv } from 'react-icons/fa';
+"use client";
+
+import React, {useState, useEffect} from 'react';
+import { FaTrophy } from 'react-icons/fa';
 
 interface Props {
   text: string;
@@ -30,10 +32,10 @@ const colorMapLight = [
   'text-pink-200',
 ];
 
-const stringToColor = (string: string) => {
+const stringToColor = (string: string): string => {
   let hash = 0;
 
-  if (string.length == 0) return hash;
+  if (string.length == 0) return "bg-gray-500 text-white";
 
   for (let i = 0; i < string.length; i++) {
     const char = string.charCodeAt(i);
@@ -46,11 +48,18 @@ const stringToColor = (string: string) => {
 };
 
 export const WatchBadge = ({ text }: Props) => {
+  const [color, setColor] = useState<string>("bg-gray-500 text-white");
+
+  // to avoid ssr error
+  useEffect(() => {
+      setColor(stringToColor(text));
+  }, [text]);
+
   return (
     <div
       className={
         'inline-block justify-center text-sm font-medium mr-2 px-2.5 py-0.5 rounded ' +
-        stringToColor(text)
+        color
       }
     >
       {text.replaceAll('_', ' ')}
@@ -59,11 +68,18 @@ export const WatchBadge = ({ text }: Props) => {
 };
 
 export const AchievementBadge = ({ text }: Props) => {
+  const [color, setColor] = useState<string>("bg-gray-500 text-white");
+
+  // to avoid ssr error
+  useEffect(() => {
+      setColor(stringToColor(text));
+  }, [text]);
+
   return (
     <div
       className={
         'inline-block justify-center text-sm font-medium mr-2 px-2.5 py-0.5 rounded ' +
-        stringToColor(text)
+        color
       }
     >
       <div className="flex flex-row items-center">
@@ -75,11 +91,18 @@ export const AchievementBadge = ({ text }: Props) => {
 };
 
 export const InterestBadge = ({ text }: Props) => {
+  const [color, setColor] = useState<string>("bg-gray-500 text-white");
+
+  // to avoid ssr error
+  useEffect(() => {
+      setColor(stringToColor(text));
+  }, [text]);
+
   return (
     <div
       className={
         'inline-block justify-center text-sm font-medium mr-2 px-2.5 py-0.5 rounded ' +
-        stringToColor(text)
+        color
       }
     >
       <div>{text.replaceAll('_', ' ')}</div>
@@ -91,11 +114,20 @@ export const BookBadge = ({ title, percent }: BookProps) => {
   const bookStyle = {
     width: percent + '%',
   };
+  
+  const [color, setColor] = useState<string>("bg-gray-500 text-white");
+
+  // to avoid ssr error
+  useEffect(() => {
+      setColor(stringToColor(title));
+  }, [title]);
+
+
   return (
     <div
       className={
         'inline-block justify-center text-sm font-medium mr-2 px-2.5 py-0.5 rounded ' +
-        stringToColor(title)
+        color
       }
     >
       <div className="flex flex-row items-center">
