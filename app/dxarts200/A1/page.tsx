@@ -26,8 +26,6 @@ export default function Page({}: Props) {
     const time =
       today.getHours() + ':' + today.getMinutes() + ':' + today.getSeconds();
     setDateTime(date + ' ' + time);
-
-    setWord('future');
   }, []);
 
   useEffect(() => {
