@@ -11,7 +11,7 @@ const getUrl = (word: string) => {
 export default function Page({}: Props) {
   // get today's date and time
   const [dateTime, setDateTime] = React.useState('');
-  const [word, setWord] = React.useState('future');
+  const [word, setWord] = React.useState('futuristic');
 
   const [wordOptions, setWordOptions] = React.useState(["****", "****", "****", "****", "****"]);
 
