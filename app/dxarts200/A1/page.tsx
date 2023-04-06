@@ -51,7 +51,7 @@ export default function Page({}: Props) {
 
   return (
     <div className="flex items-center w-1/2 h-screen mx-auto">
-      <div className="w-full shadow-2xl subpixel-antialiased rounded h-64 bg-black border-black mx-auto">
+      <div className="w-full h-1/2 shadow-2xl subpixel-antialiased rounded h-64 bg-black border-black mx-auto  pb-8">
         <div
           className="flex items-center h-6 rounded-t bg-gray-100 border-b border-gray-500 text-center text-black"
           id="headerTerminal"
@@ -69,23 +69,23 @@ export default function Page({}: Props) {
             id="maxbtn"
           ></div>
           <div className="mx-auto pr-16" id="terminaltitle">
-            <p className="text-center text-sm">Terminal</p>
+            <p className="text-center text-md">Terminal</p>
           </div>
         </div>
         <div
           className="pl-1 pt-1 h-auto  text-green-200 font-mono text-xs bg-black"
           id="console"
         >
-          <p className="pb-1">Last login: {dateTime} on dxarts200</p>
-          <p className="pb-1 my-1">Explore the world of word association as we dive deep into the future</p>
+          <p className="pb-1 text-lg">Last login: {dateTime} on dxarts200</p>
+          <p className="pb-1 my-1 text-lg">Explore the world of word association as we dive deep into the future</p>
 
           <a>
-            <p className="pb-1 text-white">
+            <p className="pb-1 text-white text-lg">
               {word}
             </p>
             {wordOptions.map((option) => {
               return (
-                <p onClick={() => setWord(option)} key={'_'} className="pb-1 hover:text-green-600 hover:font-bold cursor-pointer">
+                <p onClick={() => setWord(option)} key={'_'} className="pb-1 text-lg hover:text-green-600 hover:font-bold cursor-pointer">
                   {'>'} {option}{' '}
                 </p>
               );
