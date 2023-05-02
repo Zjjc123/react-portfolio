@@ -1,19 +1,24 @@
-export const revalidate = 60;
-
-import About from '../components/About'
-import Contact from '../components/Contact'
-import Main from '../components/Main'
-import NavBar from '../components/NavBar'
-import Projects from '../components/Project'
+import Blog from '../components/Blog';
+import Personal from '../components/Personal';
+import Portfolio from '../components/Portfolio';
 
 export default function Home() {
   return (
-    <div className='bg-[#0c0f13] text-white tracking-wide'>
-      <NavBar />
-      <Main />
-      <About />
-      <Projects />
-      <Contact />
+    <div className="bg-white text-black tracking-wide">
+      <div className="grid grid-cols-3 gap-4 my-8">
+        <div className="p-4 px-10">
+          <div className="uppercase text-xl tracking-widest">About</div>
+          <Personal />
+        </div>
+        <div className="p-4">
+          <div className="uppercase text-xl tracking-widest">PORTFOLIO</div>
+          <Portfolio />
+        </div>
+        <div className="p-4">
+          <p className="uppercase text-xl tracking-widest">Blog</p>
+          <Blog />
+        </div>
+      </div>
     </div>
-  )
+  );
 }
