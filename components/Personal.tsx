@@ -1,6 +1,11 @@
 'use client';
 
+import Link from 'next/link';
 import React from 'react';
+
+import { AiOutlineMail } from 'react-icons/ai';
+import { BsFillPersonLinesFill } from 'react-icons/bs';
+import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 
 type Props = {};
 
@@ -15,8 +20,35 @@ export default function Personal({}: Props) {
           various interdisciplinary fields.
         </p>
         <p className="py-2">
-          Also a photographer and videographer. I love to capture moments and tell stories.
+          Also a photographer and videographer. I love to capture moments and
+          tell stories.
         </p>
+      </div>
+      <div className="flex items-center justify-between max-w-[380px] m-auto py-5">
+        <a
+          href="https://www.linkedin.com/in/zjjc123/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <div className="rounded-full shadow-lg shadow-gray-300 p-4 cursor-pointer hover:scale-110 ease-cubic duration-300">
+            <FaLinkedinIn />
+          </div>
+        </a>
+        <a href="https://github.com/zjjc123" target="_blank" rel="noreferrer">
+          <div className="rounded-full shadow-lg shadow-gray-300 p-4 cursor-pointer hover:scale-110 ease-cubic duration-300">
+            <FaGithub />
+          </div>
+        </a>
+        <Link href="mailto:zjjc123@gmail.com">
+          <div className="rounded-full shadow-lg shadow-gray-300 p-4 cursor-pointer hover:scale-110 ease-cubic duration-300">
+            <AiOutlineMail />
+          </div>
+        </Link>
+        <Link href="/resume">
+          <div className="rounded-full shadow-lg shadow-gray-300 p-4 cursor-pointer hover:scale-110 ease-cubic duration-300">
+            <BsFillPersonLinesFill />
+          </div>
+        </Link>
       </div>
     </>
   );
