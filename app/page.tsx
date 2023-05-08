@@ -6,15 +6,15 @@ export default function Home() {
   return (
     <div className="bg-white text-black tracking-wide">
       <div className="grid grid-cols-3 gap-4 my-8">
-        <div className="p-4 px-10">
+        <div className="px-8">
           <div className="uppercase text-xl tracking-widest">About</div>
           <Personal />
         </div>
-        <div className="p-4">
+        <div className="px-8">
           <div className="uppercase text-xl tracking-widest">PORTFOLIO</div>
           <Portfolio />
         </div>
-        <div className="p-4">
+        <div className="px-8">
           <p className="uppercase text-xl tracking-widest">Blog</p>
           <Blog />
         </div>
