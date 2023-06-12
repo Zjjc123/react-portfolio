@@ -7,17 +7,17 @@ type Props = {};
 export default function Blog({}: Props) {
   return (
     <>
-      <BlogEntry date="05/08/2021">
-        <P>{''}</P>
+      <BlogEntry date="06/11/2023">
+        <P>{'Justice for Daikon Cat!'}</P>
       </BlogEntry>
-      <BlogEntry date="05/07/2021">
+      <BlogEntry date="05/07/2023">
         <P>
           {
             'Hot take (maybe not): introduction computer science education should be about capturing interests, not teaching foundations.'
           }
         </P>
       </BlogEntry>
-      <BlogEntry date="05/06/2021">
+      <BlogEntry date="05/06/2023">
         <P>
           {
             'On a scale of 1 to the american education system, how elitist is it to be bewildered by the fact that 90% of people at a concert in Seattle had a hard time recognizing Smells Like Teen Spirit?'
