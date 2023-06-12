@@ -21,7 +21,7 @@ export default function Personal({}: Props) {
         </p>
         <p className="py-2">
           Also a photographer and videographer. I love to capture moments and
-          tell stories.
+          tell stories with digital media.
         </p>
       </div>
       <div className="flex items-center justify-between max-w-[380px] m-auto py-5">
