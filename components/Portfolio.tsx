@@ -15,7 +15,7 @@ export default function Portfolio({}: Props) {
     <div className="flex flex-col">
       <Link
         href="/portfolio"
-        className="text-2xl mb-8 text-gray-800 hover:text-gray-400"
+        className="text-4xl mb-8 text-gray-800 hover:text-gray-400"
         onMouseEnter={() => setHover1(true)}
         onMouseLeave={() => setHover1(false)}
       >
@@ -23,7 +23,7 @@ export default function Portfolio({}: Props) {
       </Link>
       <Link
         href="/videos"
-        className="text-2xl mb-8 text-gray-800 hover:text-gray-400"
+        className="text-4xl mb-8 text-gray-800 hover:text-gray-400"
         onMouseEnter={() => setHover2(true)}
         onMouseLeave={() => setHover2(false)}
       >
@@ -31,7 +31,7 @@ export default function Portfolio({}: Props) {
       </Link>
       <Link
         href="/photography"
-        className="text-2xl mb-8 text-gray-800 hover:text-gray-400"
+        className="text-4xl mb-8 text-gray-800 hover:text-gray-400"
         onMouseEnter={() => setHover3(true)}
         onMouseLeave={() => setHover3(false)}
       >
@@ -39,7 +39,7 @@ export default function Portfolio({}: Props) {
       </Link>
       <Link
         href="/resume"
-        className="text-2xl mb-8 text-gray-800 hover:text-gray-400"
+        className="text-4xl mb-8 text-gray-800 hover:text-gray-400"
         onMouseEnter={() => setHover4(true)}
         onMouseLeave={() => setHover4(false)}
       >
