@@ -14,7 +14,7 @@ export default function Portfolio({}: Props) {
   return (
     <div className="flex flex-col">
       <Link
-        href="/portfolio"
+        href="/projects"
         className="text-4xl mb-8 text-gray-800 hover:text-gray-400"
         onMouseEnter={() => setHover1(true)}
         onMouseLeave={() => setHover1(false)}
