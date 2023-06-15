@@ -7,6 +7,13 @@ type Props = {};
 export default function Blog({}: Props) {
   return (
     <>
+      <BlogEntry date="06/14/2023">
+        <P>
+          {
+            "I've never thought about the fact that movements like modernism or post-modernism isn't just an art movement, but a cultural shift, although expressed in different forms in different mediums. I say this because memes are kinda a part of that shift as well, especially the idea that unironic things are just cringe."
+          }
+        </P>
+      </BlogEntry>
       <BlogEntry date="06/11/2023">
         <P>{'Justice for Daikon Cat!'}</P>
       </BlogEntry>
